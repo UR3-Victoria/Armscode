@@ -1,0 +1,40 @@
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\BA-EVE-03 Controller\bin\Debug\BA-EVE-03 Controller.exe.config
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\BA-EVE-03 Controller\bin\Debug\BA-EVE-03 Controller.exe
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\BA-EVE-03 Controller\bin\Debug\BA-EVE-03 Controller.pdb
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\BA-EVE-03 Controller\bin\Debug\Emgu.CV.dll
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\BA-EVE-03 Controller\bin\Debug\Emgu.CV.UI.dll
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\BA-EVE-03 Controller\bin\Debug\Emgu.Util.dll
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\BA-EVE-03 Controller\bin\Debug\ZedGraph.dll
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\BA-EVE-03 Controller\bin\Debug\Emgu.CV.xml
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\BA-EVE-03 Controller\bin\Debug\Emgu.CV.UI.xml
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\BA-EVE-03 Controller\bin\Debug\Emgu.Util.xml
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\BA-EVE-03 Controller\obj\Debug\Team Victoria Controller.csprojResolveAssemblyReference.cache
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\BA-EVE-03 Controller\obj\Debug\MainWindow.baml
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\BA-EVE-03 Controller\obj\Debug\MainWindow.g.cs
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\BA-EVE-03 Controller\obj\Debug\App.g.cs
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\BA-EVE-03 Controller\obj\Debug\BA-EVE-03 Controller_MarkupCompile.cache
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\BA-EVE-03 Controller\obj\Debug\BA-EVE-03 Controller.g.resources
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\BA-EVE-03 Controller\obj\Debug\BA_EVE_03_Controller.Properties.Resources.resources
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\BA-EVE-03 Controller\obj\Debug\Team Victoria Controller.csproj.GenerateResource.Cache
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\BA-EVE-03 Controller\obj\Debug\BA-EVE-03 Controller.exe
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\BA-EVE-03 Controller\obj\Debug\BA-EVE-03 Controller.pdb
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\Team Victoria Controller\bin\Debug\BA-EVE-03 Controller.exe.config
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\Team Victoria Controller\obj\Debug\BA-EVE-03 Controller.exe
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\Team Victoria Controller\obj\Debug\BA-EVE-03 Controller.pdb
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\Team Victoria Controller\obj\Debug\Team Victoria Controller.csprojResolveAssemblyReference.cache
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\Team Victoria Controller\obj\Debug\MainWindow.baml
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\Team Victoria Controller\obj\Debug\MainWindow.g.cs
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\Team Victoria Controller\obj\Debug\App.g.cs
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\Team Victoria Controller\obj\Debug\BA-EVE-03 Controller_MarkupCompile.cache
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\Team Victoria Controller\obj\Debug\BA-EVE-03 Controller.g.resources
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\Team Victoria Controller\obj\Debug\BA_EVE_03_Controller.Properties.Resources.resources
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\Team Victoria Controller\obj\Debug\Team Victoria Controller.csproj.GenerateResource.Cache
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\Team Victoria Controller\bin\Debug\BA-EVE-03 Controller.exe
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\Team Victoria Controller\bin\Debug\BA-EVE-03 Controller.pdb
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\Team Victoria Controller\bin\Debug\Emgu.CV.dll
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\Team Victoria Controller\bin\Debug\Emgu.CV.UI.dll
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\Team Victoria Controller\bin\Debug\Emgu.Util.dll
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\Team Victoria Controller\bin\Debug\ZedGraph.dll
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\Team Victoria Controller\bin\Debug\Emgu.CV.xml
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\Team Victoria Controller\bin\Debug\Emgu.CV.UI.xml
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\Team Victoria Controller\bin\Debug\Emgu.Util.xml

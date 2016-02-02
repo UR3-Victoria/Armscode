@@ -1,0 +1,23 @@
+c:\users\cmorton\documents\visual studio 2013\Projects\BA-EVE-03 Controller\BA-EVE-03 Controller\bin\Debug\BA-EVE-03 Controller.exe.config
+c:\users\cmorton\documents\visual studio 2013\Projects\BA-EVE-03 Controller\BA-EVE-03 Controller\bin\Debug\BA-EVE-03 Controller.exe
+c:\users\cmorton\documents\visual studio 2013\Projects\BA-EVE-03 Controller\BA-EVE-03 Controller\bin\Debug\BA-EVE-03 Controller.pdb
+c:\users\cmorton\documents\visual studio 2013\Projects\BA-EVE-03 Controller\BA-EVE-03 Controller\obj\Debug\BA-EVE-03 Controller.csprojResolveAssemblyReference.cache
+c:\users\cmorton\documents\visual studio 2013\Projects\BA-EVE-03 Controller\BA-EVE-03 Controller\obj\Debug\MainWindow.baml
+c:\users\cmorton\documents\visual studio 2013\Projects\BA-EVE-03 Controller\BA-EVE-03 Controller\obj\Debug\MainWindow.g.cs
+c:\users\cmorton\documents\visual studio 2013\Projects\BA-EVE-03 Controller\BA-EVE-03 Controller\obj\Debug\App.g.cs
+c:\users\cmorton\documents\visual studio 2013\Projects\BA-EVE-03 Controller\BA-EVE-03 Controller\obj\Debug\BA-EVE-03 Controller_MarkupCompile.cache
+c:\users\cmorton\documents\visual studio 2013\Projects\BA-EVE-03 Controller\BA-EVE-03 Controller\obj\Debug\BA-EVE-03 Controller.g.resources
+c:\users\cmorton\documents\visual studio 2013\Projects\BA-EVE-03 Controller\BA-EVE-03 Controller\obj\Debug\BA_EVE_03_Controller.Properties.Resources.resources
+c:\users\cmorton\documents\visual studio 2013\Projects\BA-EVE-03 Controller\BA-EVE-03 Controller\obj\Debug\BA-EVE-03 Controller.csproj.GenerateResource.Cache
+c:\users\cmorton\documents\visual studio 2013\Projects\BA-EVE-03 Controller\BA-EVE-03 Controller\obj\Debug\BA-EVE-03 Controller.exe
+c:\users\cmorton\documents\visual studio 2013\Projects\BA-EVE-03 Controller\BA-EVE-03 Controller\obj\Debug\BA-EVE-03 Controller.pdb
+C:\Users\cmorton\documents\visual studio 2013\Projects\BA-EVE-03 Controller\BA-EVE-03 Controller\bin\Debug\Emgu.CV.dll
+C:\Users\cmorton\documents\visual studio 2013\Projects\BA-EVE-03 Controller\BA-EVE-03 Controller\bin\Debug\Emgu.CV.UI.dll
+C:\Users\cmorton\documents\visual studio 2013\Projects\BA-EVE-03 Controller\BA-EVE-03 Controller\bin\Debug\Emgu.Util.dll
+C:\Users\cmorton\documents\visual studio 2013\Projects\BA-EVE-03 Controller\BA-EVE-03 Controller\bin\Debug\ZedGraph.dll
+C:\Users\cmorton\documents\visual studio 2013\Projects\BA-EVE-03 Controller\BA-EVE-03 Controller\bin\Debug\Emgu.CV.xml
+C:\Users\cmorton\documents\visual studio 2013\Projects\BA-EVE-03 Controller\BA-EVE-03 Controller\bin\Debug\Emgu.CV.UI.xml
+C:\Users\cmorton\documents\visual studio 2013\Projects\BA-EVE-03 Controller\BA-EVE-03 Controller\bin\Debug\Emgu.Util.xml
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\BA-EVE-03 Controller\bin\Debug\BA-EVE-03 Controller.exe.config
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\BA-EVE-03 Controller\obj\Debug\BA-EVE-03 Controller.exe
+C:\Users\cmorton\Documents\Visual Studio 2013\Projects\Team Victoria Controller\BA-EVE-03 Controller\obj\Debug\BA-EVE-03 Controller.pdb

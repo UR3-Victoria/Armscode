@@ -1,0 +1,125 @@
+﻿<Window x:Class="Team_Victoria_Controller.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Team_Victoria_Controller" Height="800" Width="1200" WindowStartupLocation="CenterScreen" MinWidth="640" MinHeight="320" MaxWidth="1440" MaxHeight="800">
+
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" Margin="0" VerticalContentAlignment="Center" Padding="0" >
+            <MenuItem Header="PROGRAM" Margin="4" >
+                <MenuItem Header="Start Program" Click="StartProgram"/>
+                <MenuItem Header="Pause Program"/>
+                <Separator/>
+                <MenuItem Header="Exit" Click="Exit"/>
+            </MenuItem>
+            <MenuItem Header="CAPTURE" Margin="4">
+                <MenuItem Header="Start Capture" Click="StartCapture"/>
+                <MenuItem Header="Stop Capture" Click="StopCapture"/>
+                <Separator/>
+                <MenuItem Header="Manual Scan" Click="ManualScan"/>
+            </MenuItem>
+            <MenuItem Header="TRANSFORMS" Margin="4"/>
+            <MenuItem Header="COMMAND QUEUE" Margin="4">
+                <MenuItem Header="Clear Queue"/>
+                <MenuItem Header="Import Queue"/>
+                <MenuItem Header="Export Queue"/>
+                <Separator/>
+                <MenuItem Header="Add Command"/>
+                <MenuItem Header="Dequeue Next Command"/>
+                <MenuItem Header="Dequeue Last Command"/>
+                <Separator/>
+                <MenuItem Header="Run Next Command"/>
+            </MenuItem>
+            <MenuItem Header="MANUAL" Margin="4">
+                <MenuItem Header="Activate Motors" Click="MenuMotorsOn"/>
+                <MenuItem Header="Deactivate Motors" Click="MenuMotorsOff"/>
+                <Separator/>
+                <MenuItem Header="Joystick  ON" Click="MenuJoystickOn"/>
+                <MenuItem Header="Joystick  OFF" Click="MenuJoystickOff"/>
+                <Separator/>
+                <MenuItem Header="Lights     ON" Click="MenuLightsOn"/>
+                <MenuItem Header="Lights     OFF" Click="MenuLightsOff"/>
+                <Separator/>
+                <MenuItem Header="Pump     ON" Click="MenuPumpOn"/>
+                <MenuItem Header="Pump     OFF" Click="MenuPumpOff"/>
+                <Separator/>
+                <MenuItem Header="Go to Home" Click="GoToHome"/>
+                <MenuItem Header="Go to  . . ." Click="GoToInput"/>
+            </MenuItem>
+        </Menu>
+
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem DockPanel.Dock="Right">
+                <ProgressBar x:Name="bar_Progress" Value="100" Width="320" Height="24" Foreground="#FFFFC400"/>
+            </StatusBarItem>
+            <Separator DockPanel.Dock="Right" Background="#FFBDBDBD" Width="2"/>
+            
+            <StatusBarItem DockPanel.Dock="Left">
+                <TextBlock x:Name="txt_Time" Width="64">12:44</TextBlock>
+            </StatusBarItem>
+            <Separator DockPanel.Dock="Left" Background="#FFBDBDBD" Width="2"/>
+
+            <StatusBarItem>
+                <TextBlock x:Name="txt_Status">Ready</TextBlock>
+            </StatusBarItem>
+        </StatusBar>
+
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" MinWidth="180"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="3*" MinWidth="180"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="2*" MinWidth="180"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="2*" MinWidth="180"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid>
+                <Grid.Background>
+                    <SolidColorBrush Color="#FF404040"/>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Viewbox>
+                    <Image Name="ImageRaw" Stretch="Fill" Width="480" Height="640" />
+                </Viewbox>
+                <Viewbox Grid.Row="1">
+                    <Image Name="ImagePost" Stretch="Fill" Width="480" Height="640" />
+                </Viewbox>
+            </Grid>
+
+            <GridSplitter Grid.Column="1" Width="10" HorizontalAlignment="Center" />
+
+            <StackPanel x:Name="PointStack" Grid.Column="2">
+
+            </StackPanel>
+
+            <GridSplitter Grid.Column="3" Width="10" HorizontalAlignment="Center"/>
+
+
+            <TextBlock x:Name="CommandQueue1" Grid.Column="4">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFC8C8C8" Offset="1"/>
+                        <GradientStop Color="#FFE4E4E4" Offset="0.332"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+
+            <GridSplitter Grid.Column="5" Width="10" HorizontalAlignment="Center" />
+
+            <TextBlock x:Name="CommandQueue2" Grid.Column="6">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFC8C8C8" Offset="1"/>
+                        <GradientStop Color="#FFE4E4E4" Offset="0.332"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+        </Grid>
+    </DockPanel>
+
+</Window>
