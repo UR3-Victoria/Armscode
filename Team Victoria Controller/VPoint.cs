@@ -19,7 +19,7 @@ namespace Team_Victoria_Controller
         public Bgr ID;
 
         public robotCords Eve;
-        public robotCords Luis;
+        public robotCords Marty;
 
         public int x;
         public int y;
@@ -60,7 +60,7 @@ namespace Team_Victoria_Controller
             TransformXYZtoLUIS();
 
             Eve.D = Math.PI / 2; //NEEDS MORE
-            Luis.D = 0;
+            Marty.D = 0;
         }
         public VPoint(int _x, int _y, int _z)
         {
@@ -72,7 +72,7 @@ namespace Team_Victoria_Controller
             TransformXYZtoLUIS();
 
             Eve.D = Math.PI / 2;
-            Luis.D = 0; 
+            Marty.D = 0; 
         }
         public VPoint(int _x, int _y)
         {
@@ -84,7 +84,7 @@ namespace Team_Victoria_Controller
             TransformXYZtoLUIS();
 
             Eve.D = Math.PI / 2;
-            Luis.D = 0;
+            Marty.D = 0;
         }
         public VPoint(double _root, double _shoulder, double _elbow, double _wrist)
         {
@@ -117,24 +117,26 @@ namespace Team_Victoria_Controller
         {
 
             int Lx = -x;
-            int Ly = LuisDef.DistanceFromEve - y;
+            int Ly = MartyDef.DistanceFromEve - y;
 
-            /* Hey Luis
-             * Here is where you can build your transform function
-             * 
-             * The x and y you are given should be relative to the center of rotation 
-             * of the base of your robot via the function above
-             * Feel free to use your robot definition class in RobotDef.cs
-             * 
-             * Format for use:  LuisDef.floorToRoot_Z
-             * ect.
-             * 
-             * Also feel free to use the Geometry class for some geometrical functions
-             * (may want to double check if they match what you want)
-             * 
-             * Assign the final A, B, and C to Luis.A, Luis.B, and Luis.C
-             * 
-             */
+            double ang1 = (Geometry.XYtoTheta(Lx, Ly) * 180.0) / Math.PI;
+            ang1 += 90;
+            ang1 = (180 - (ang1));
+            Marty.C = ang1;
+
+            double linka = MartyDef.RootToElbow_L;
+            double linkb = MartyDef.ElbowToWrist_L;
+
+            double r = (Math.Sqrt(Math.Pow(Lx, 2) + Math.Pow(Ly, 2)) - MartyDef.WristToEnd_L;
+            double dh = MartyDef.FloorToRoot_Z - MartyDef.WristToEnd_Z;
+            double d = Math.Sqrt((r * r) + (dh * dh));
+            double theta2 = Math.Acos((linka * linka + linkb * linkb - d * d) / (2 * linka * linkb)) * (180 / Math.PI);
+            double theta1c = Math.Acos((d * d + linka * linka - linkb * linkb) / (2 * d * linka)) * (180 / Math.PI);
+            double thetac = Math.Atan(r / dh) * (180 / Math.PI);
+            double theta1 = theta1c + thetac - 90;
+
+            Marty.B = theta2;
+            Marty.A = theta1;
 
         }
 

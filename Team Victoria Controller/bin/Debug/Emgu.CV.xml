@@ -78,21 +78,6 @@
             Opencv's calling convention
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvInvoke.EXTERN_LIBRARY">
-            <summary>
-            The file name of the cvextern library
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvInvoke.EXTERN_GPU_LIBRARY">
-            <summary>
-            The file name of the cvextern library
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvInvoke.OPENCV_FFMPEG_LIBRARY">
-            <summary>
-            The file name of the opencv_ffmpeg library
-            </summary>
-        </member>
         <member name="F:Emgu.CV.CvInvoke.OPENCV_CORE_LIBRARY">
             <summary>
             The file name of the core library
@@ -103,9 +88,9 @@
             The file name of the imgproc library
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvInvoke.OPENCV_VIDEO_LIBRARY">
+        <member name="F:Emgu.CV.CvInvoke.OPENCV_HIGHGUI_LIBRARY">
             <summary>
-            The file name of the video library
+            The file name of the highgui library
             </summary>
         </member>
         <member name="F:Emgu.CV.CvInvoke.OPENCV_FLANN_LIBRARY">
@@ -113,24 +98,14 @@
             The file name of the flann library
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvInvoke.OPENCV_ML_LIBRARY">
+        <member name="F:Emgu.CV.CvInvoke.OPENCV_FEATURES2D_LIBRARY">
             <summary>
-            The file name of the ml library
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvInvoke.OPENCV_HIGHGUI_LIBRARY">
-            <summary>
-            The file name of the highgui library
+            The file name of the feature2d library
             </summary>
         </member>
         <member name="F:Emgu.CV.CvInvoke.OPENCV_OBJDETECT_LIBRARY">
             <summary>
             The file name of the objdetect library
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvInvoke.OPENCV_FEATURES2D_LIBRARY">
-            <summary>
-            The file name of the features2d library
             </summary>
         </member>
         <member name="F:Emgu.CV.CvInvoke.OPENCV_CALIB3D_LIBRARY">
@@ -143,24 +118,9 @@
             The file name of the legacy library
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvInvoke.OPENCV_CONTRIB_LIBRARY">
+        <member name="F:Emgu.CV.CvInvoke.OPENCV_VIDEO_LIBRARY">
             <summary>
-            The file name of the contrib library
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvInvoke.OPENCV_GPULEGACY_LIBRARY">
-            <summary>
-            The file name of the gpulegacy library
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvInvoke.OPENCV_GPUARITHM_LIBRARY">
-            <summary>
-            The file name of the gpuarithm library
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvInvoke.OPENCV_GPUWARPING_LIBRARY">
-            <summary>
-            The file name of the gpuwarping library
+            The file name of the video library
             </summary>
         </member>
         <member name="F:Emgu.CV.CvInvoke.OPENCV_GPU_LIBRARY">
@@ -168,39 +128,34 @@
             The file name of the gpu library
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvInvoke.OPENCV_GPUFILTERS_LIBRARY">
+        <member name="F:Emgu.CV.CvInvoke.OPENCV_STITCHING_LIBRARY">
             <summary>
-            The file name of the gpufilters library
+            The file name of the opencv_stitching library
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvInvoke.OPENCV_GPUIMGPROC_LIBRARY">
+        <member name="F:Emgu.CV.CvInvoke.EXTERN_LIBRARY">
             <summary>
-            The file name of the gpuimgproc library
+            The file name of the cvextern library
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvInvoke.OPENCV_GPUOPTFLOW_LIBRARY">
+        <member name="F:Emgu.CV.CvInvoke.EXTERN_GPU_LIBRARY">
             <summary>
-            The file name of the gpuoptflow library
+            The file name of the cvextern_gpu library
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvInvoke.OPENCV_GPUSTEREO_LIBRARY">
+        <member name="F:Emgu.CV.CvInvoke.OPENCV_FFMPEG_LIBRARY">
             <summary>
-            The file name of the gpustereo library
+            The file name of the opencv_ffmpeg library
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvInvoke.OPENCV_GPUBGSEGM_LIBRARY">
+        <member name="F:Emgu.CV.CvInvoke.OPENCV_ML_LIBRARY">
             <summary>
-            The file name of the gpubgsegm library
+            The file name of the ml library
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvInvoke.OPENCV_GPUFEATURES2D_LIBRARY">
+        <member name="F:Emgu.CV.CvInvoke.OPENCV_CONTRIB_LIBRARY">
             <summary>
-            The file name of the gpufeatures2d library
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvInvoke.OPENCV_OCL_LIBRARY">
-            <summary>
-            The file name of the ocl library
+            The file name of the contrib library
             </summary>
         </member>
         <member name="F:Emgu.CV.CvInvoke.OPENCV_PHOTO_LIBRARY">
@@ -208,24 +163,9 @@
             The file name of the photo library
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvInvoke.OPENCV_BIOINSPIRED_LIBRARY">
-            <summary>
-            The file name of the bioinspired library
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvInvoke.OPENCV_SUPERRES_LIBRARY">
-            <summary>
-            The file name of the superres library
-            </summary>
-        </member>
         <member name="F:Emgu.CV.CvInvoke.OPENCV_NONFREE_LIBRARY">
             <summary>
             The file name of the nonfree library
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvInvoke.OPENCV_STITCHING_LIBRARY">
-            <summary>
-            The file name of the stitching library
             </summary>
         </member>
         <member name="F:Emgu.CV.CvInvoke.OPENCV_VIDEOSTAB_LIBRARY">
@@ -233,24 +173,9 @@
             The file name of the videostab library
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvInvoke.OPENCV_OPTIM_LIBRARY">
+        <member name="F:Emgu.CV.CvInvoke.UnmanagedCodeBitness">
             <summary>
-            The file name of the optim library
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvInvoke.OPENCV_SOFTCASCADE_LIBRARY">
-            <summary>
-            The file name of the softcascade library
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvInvoke.OPENCV_CUDEV_LIBRARY">
-            <summary>
-            The file name of the cudev library
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvInvoke.OPENCV_GPUCODEC_LIBRARY">
-            <summary>
-            The file name of the gpucodec library
+            The bit-ness of the unmanaged code (either 32 or 64) 
             </summary>
         </member>
         <member name="M:Emgu.CV.CvInvoke.cvbCvBlobsCreate">
@@ -302,12 +227,6 @@
             <param name="c3"></param>
             <param name="c4"></param>
             <returns></returns>
-        </member>
-        <member name="M:Emgu.CV.CvInvoke.SanityCheck">
-            <summary>
-            Check if the size of the C structures match those of C#
-            </summary>
-            <returns>True if the size matches</returns>
         </member>
         <member name="M:Emgu.CV.CvInvoke.cvFindHomography(System.IntPtr,System.IntPtr,System.IntPtr,Emgu.CV.CvEnum.HOMOGRAPHY_METHOD,System.Double,System.IntPtr)">
             <summary>
@@ -387,6 +306,15 @@
             <param name="disparity">The output single-channel 16-bit signed disparity map of the same size as input images. Its elements will be the computed disparities, multiplied by 16 and rounded to integer's</param>
             <param name="state">Stereo correspondence structure</param>
         </member>
+        <member name="M:Emgu.CV.CvInvoke.cvFindStereoCorrespondenceBM(System.IntPtr,System.IntPtr,System.IntPtr,Emgu.CV.Structure.MCvStereoBMState@)">
+            <summary>
+            Computes disparity map for the input rectified stereo pair.
+            </summary>
+            <param name="left">The left single-channel, 8-bit image</param>
+            <param name="right">The right image of the same size and the same type</param>
+            <param name="disparity">The output single-channel 16-bit signed disparity map of the same size as input images. Its elements will be the computed disparities, multiplied by 16 and rounded to integer's</param>
+            <param name="state">Stereo correspondence structure</param>
+        </member>
         <member name="M:Emgu.CV.CvInvoke.cvReprojectImageTo3D(System.IntPtr,System.IntPtr,System.IntPtr)">
             <summary>
             Transforms 1-channel disparity map to 3-channel image, a 3D surface.
@@ -428,7 +356,7 @@
             <param name="dpddist">Optional Nx4 matrix of derivatives of image points w.r.t. distortion coefficients</param>
             <param name="aspectRatio">Aspect ratio</param>
         </member>
-        <member name="M:Emgu.CV.CvInvoke.cvCalibrateCamera2(System.IntPtr,System.IntPtr,System.IntPtr,System.Drawing.Size,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr,Emgu.CV.CvEnum.CALIB_TYPE,Emgu.CV.Structure.MCvTermCriteria)">
+        <member name="M:Emgu.CV.CvInvoke.cvCalibrateCamera2(System.IntPtr,System.IntPtr,System.IntPtr,System.Drawing.Size,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr,Emgu.CV.CvEnum.CALIB_TYPE)">
             <summary>
             Estimates intrinsic camera parameters and extrinsic parameters for each of the views
             </summary>
@@ -441,7 +369,6 @@
             <param name="rotationVectors">The output 3xM or Mx3 array of rotation vectors (compact representation of rotation matrices, see cvRodrigues2). </param>
             <param name="translationVectors">The output 3xM or Mx3 array of translation vectors</param>
             <param name="flags">Different flags</param>
-            <param name="termCriteria">The termination criteria</param>
             <returns>The final reprojection error</returns>
         </member>
         <member name="M:Emgu.CV.CvInvoke.cvCalibrationMatrixValues(System.IntPtr,System.Int32,System.Int32,System.Double,System.Double,System.Double@,System.Double@,System.Double@,Emgu.CV.Structure.MCvPoint2D64f@,System.Double@)">
@@ -631,7 +558,7 @@
             An error handler which will ignore any error and continute
             </summary>
         </member>
-        <member name="M:Emgu.CV.CvInvoke.CvIgnoreErrorErrorHandler(System.Int32,System.IntPtr,System.IntPtr,System.IntPtr,System.Int32,System.IntPtr)">
+        <member name="M:Emgu.CV.CvInvoke.CvIgnoreErrorErrorHandler(System.Int32,System.String,System.String,System.String,System.Int32,System.IntPtr)">
             <summary>
             A custome error handler for opencv
             </summary>
@@ -643,7 +570,7 @@
             <param name="userData">Arbitrary pointer that is transparetly passed to the error handler.</param>
             <returns></returns>
         </member>
-        <member name="M:Emgu.CV.CvInvoke.CvErrorHandler(System.Int32,System.IntPtr,System.IntPtr,System.IntPtr,System.Int32,System.IntPtr)">
+        <member name="M:Emgu.CV.CvInvoke.CvErrorHandler(System.Int32,System.String,System.String,System.String,System.Int32,System.IntPtr)">
             <summary>
             A custome error handler for opencv
             </summary>
@@ -1100,14 +1027,14 @@
             <param name="mask">Operation mask, 8-bit single channel array; specifies elements of destination array to be changed</param>
         </member>
         <member name="M:Emgu.CV.CvInvoke.cvSet(System.IntPtr,Emgu.CV.Structure.MCvScalar,System.IntPtr)">
-            <summary>
-            Copies scalar value to every selected element of the destination array:
+             <summary>
+             Copies scalar value to every selected element of the destination array:
             arr(I)=value if mask(I)!=0
             If array arr is of IplImage type, then is ROI used, but COI must not be set
-            </summary>
-            <param name="arr">The destination array</param>
-            <param name="value">Fill value</param>
-            <param name="mask">Operation mask, 8-bit single channel array; specifies elements of destination array to be changed</param>
+             </summary>
+             <param name="arr">The destination array</param>
+             <param name="value">Fill value</param>
+             <param name="mask">Operation mask, 8-bit single channel array; specifies elements of destination array to be changed</param>
         </member>
         <member name="M:Emgu.CV.CvInvoke.cvSetZero(System.IntPtr)">
             <summary>
@@ -1678,7 +1605,7 @@
             </param>
             <param name="shift">Number of fractional bits in the point coordinates</param>
         </member>
-        <member name="M:Emgu.CV.CvInvoke.cvPolyLine(System.IntPtr,System.IntPtr,System.IntPtr,System.Int32,System.Int32,Emgu.CV.Structure.MCvScalar,System.Int32,Emgu.CV.CvEnum.LINE_TYPE,System.Int32)">
+        <member name="M:Emgu.CV.CvInvoke.cvPolyLine(System.IntPtr,System.IntPtr[],System.Int32[],System.Int32,System.Int32,Emgu.CV.Structure.MCvScalar,System.Int32,Emgu.CV.CvEnum.LINE_TYPE,System.Int32)">
             <summary>
             Draws a single or multiple polygonal curves
             </summary>
@@ -2150,7 +2077,7 @@
             </summary>
             <param name="rng">the seed for the random number generator</param>
             <param name="arr">The destination array</param>
-            <param name="distType">Distribution type</param>
+            <param name="dist_type">Distribution type</param>
             <param name="param1">The first parameter of distribution. In case of uniform distribution it is the inclusive lower boundary of random numbers range. In case of normal distribution it is the mean value of random numbers</param>
             <param name="param2">The second parameter of distribution. In case of uniform distribution it is the exclusive upper boundary of random numbers range. In case of normal distribution it is the standard deviation of random numbers</param>
         </member>
@@ -2550,125 +2477,6 @@
             <param name="maxVal">The exclusive upper boundary of valid values range</param>
             <returns>If quiet, return true if all values are in range</returns>
         </member>
-        <member name="M:Emgu.CV.CvInvoke.CvEstimateAffine3D(Emgu.CV.Structure.MCvPoint3D32f[],Emgu.CV.Structure.MCvPoint3D32f[],Emgu.CV.Matrix{System.Double}@,System.Byte[]@,System.Double,System.Double)">
-            <summary>
-            Computes an optimal affine transformation between two 3D point sets.
-            </summary>
-            <param name="src">First input 3D point set.</param>
-            <param name="dst">Second input 3D point set.</param>
-            <param name="estimate">Output 3D affine transformation matrix.</param>
-            <param name="inliers">Output vector indicating which points are inliers.</param>
-            <param name="ransacThreshold">Maximum reprojection error in the RANSAC algorithm to consider a point as an inlier.</param>
-            <param name="confidence">Confidence level, between 0 and 1, for the estimated transformation. Anything between 0.95 and 0.99 is usually good enough. Values too close to 1 can slow down the estimation significantly. Values lower than 0.8-0.9 can result in an incorrectly estimated transformation.</param>
-            <returns></returns>
-        </member>
-        <member name="M:Emgu.CV.CvInvoke.CvMinMaxIdx(System.IntPtr,System.Double@,System.Double@,System.Int32[],System.Int32[],System.IntPtr)">
-            <summary>
-            Finds the global minimum and maximum in an array
-            </summary>
-            <param name="src">Input single-channel array.</param>
-            <param name="minVal">The returned minimum value</param>
-            <param name="maxVal">The returned maximum value</param>
-            <param name="minIdx">The returned minimum location</param>
-            <param name="maxIdx">The returned maximum location</param>
-            <param name="mask">The extremums are searched across the whole array if mask is IntPtr.Zert. Otherwise, search is performed in the specified array region.</param>
-        </member>
-        <member name="M:Emgu.CV.CvInvoke.cvFilter2D(System.IntPtr,System.IntPtr,System.IntPtr,System.Drawing.Point)">
-            <summary>
-            Applies arbitrary linear filter to the image. In-place operation is supported. When the aperture is partially outside the image, the function interpolates outlier pixel values from the nearest pixels that is inside the image
-            </summary>
-            <param name="src">The source image</param>
-            <param name="dst">The destination image</param>
-            <param name="kernel">Convolution kernel, single-channel floating point matrix. If you want to apply different kernels to different channels, split the image using cvSplit into separate color planes and process them individually</param>
-            <param name="anchor">The anchor of the kernel that indicates the relative position of a filtered point within the kernel. The anchor shoud lie within the kernel. The special default value (-1,-1) means that it is at the kernel center</param>
-        </member>
-        <member name="M:Emgu.CV.CvInvoke.cvFilter2D(System.IntPtr,System.IntPtr,System.IntPtr,System.Drawing.Point,System.Double,Emgu.CV.CvEnum.BORDER_TYPE)">
-            <summary>
-            Applies arbitrary linear filter to the image. In-place operation is supported. When the aperture is partially outside the image, the function interpolates outlier pixel values from the nearest pixels that is inside the image
-            </summary>
-            <param name="src">The source image</param>
-            <param name="dst">The destination image</param>
-            <param name="kernel">Convolution kernel, single-channel floating point matrix. If you want to apply different kernels to different channels, split the image using cvSplit into separate color planes and process them individually</param>
-            <param name="anchor">The anchor of the kernel that indicates the relative position of a filtered point within the kernel. The anchor shoud lie within the kernel. The special default value (-1,-1) means that it is at the kernel center</param>
-            <param name="delta">The optional value added to the filtered pixels before storing them in dst</param>
-            <param name="borderType">The pixel extrapolation method</param>
-        </member>
-        <member name="M:Emgu.CV.CvInvoke.cvCLAHE(System.IntPtr,System.Double,System.Drawing.Size,System.IntPtr)">
-            <summary>
-            Contrast Limited Adaptative Histogram Equalization (CLAHE)
-            </summary>
-            <param name="srcArr">The source image</param>
-            <param name="clipLimit">Clip Limit, use 40 for default</param>
-            <param name="tileGridSize">Tile grid size, use (8, 8) for default</param>
-            <param name="dstArr">The destination image</param>
-        </member>
-        <member name="M:Emgu.CV.CvInvoke.cvFastNlMeansDenoising(System.IntPtr,System.IntPtr,System.Single,System.Int32,System.Int32)">
-            <summary>
-            Perform image denoising using Non-local Means Denoising algorithm: 
-            http://www.ipol.im/pub/algo/bcm_non_local_means_denoising/ 
-            with several computational optimizations. Noise expected to be a gaussian white noise.
-            </summary>
-            <param name="src">Input 8-bit 1-channel, 2-channel or 3-channel image.</param>
-            <param name="dst">Output image with the same size and type as src.</param>
-            <param name="h">Parameter regulating filter strength. Big h value perfectly removes noise but also removes image details, smaller h value preserves details but also preserves some noise. Recommended value 3</param>
-            <param name="templateWindowSize">Size in pixels of the template patch that is used to compute weights. Should be odd. Recommended value 7 pixels</param>
-            <param name="searchWindowSize">Size in pixels of the window that is used to compute weighted average for given pixel. Should be odd. Affect performance linearly: greater searchWindowsSize - greater denoising time. Recommended value 21 pixels</param>
-        </member>
-        <member name="M:Emgu.CV.CvInvoke.cvFastNlMeansDenoisingColored(System.IntPtr,System.IntPtr,System.Single,System.Single,System.Int32,System.Int32)">
-            <summary>
-            Perform image denoising using Non-local Means Denoising algorithm (modified for color image): 
-            http://www.ipol.im/pub/algo/bcm_non_local_means_denoising/ 
-            with several computational optimizations. Noise expected to be a gaussian white noise.
-            The function converts image to CIELAB colorspace and then separately denoise L and AB components with given h parameters using fastNlMeansDenoising function.
-            </summary>
-            <param name="src">Input 8-bit 1-channel, 2-channel or 3-channel image.</param>
-            <param name="dst">Output image with the same size and type as src.</param>
-            <param name="h">Parameter regulating filter strength. Big h value perfectly removes noise but also removes image details, smaller h value preserves details but also preserves some noise. Recommended value 3</param>
-            <param name="hColor">The same as h but for color components. For most images value equals 10 will be enought to remove colored noise and do not distort colors.</param>
-            <param name="templateWindowSize">Size in pixels of the template patch that is used to compute weights. Should be odd. Recommended value 7 pixels</param>
-            <param name="searchWindowSize">Size in pixels of the window that is used to compute weighted average for given pixel. Should be odd. Affect performance linearly: greater searchWindowsSize - greater denoising time. Recommended value 21 pixels</param>
-        </member>
-        <member name="M:Emgu.CV.CvInvoke.cvCalcOpticalFlowDualTVL1(System.IntPtr,System.IntPtr,System.IntPtr)">
-            <summary>
-            The class implements the “Dual TV L1” optical flow algorithm.
-            </summary>
-            <param name="prev">The first 8-bit single-channel input image.</param>
-            <param name="next">The second input image of the same size and the same type as prev.</param>
-            <param name="flow">The computed flow image that has the same size as prev and type CV_32FC2 .</param>
-        </member>
-        <member name="M:Emgu.CV.CvInvoke.GetCvStructSizes(Emgu.CV.Structure.CvStructSizes@)">
-            <summary>
-            This function retrive the Open CV structure sizes in unmanaged code
-            </summary>
-            <param name="sizes">The structure that will hold the Open CV structure sizes</param>
-        </member>
-        <member name="M:Emgu.CV.CvInvoke.cvChamferMatching(Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Byte},Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Byte},System.Drawing.Point[][]@,System.Single[]@,System.Double,System.Int32,System.Double,System.Int32,System.Int32,System.Int32,System.Double,System.Double,System.Double,System.Double)">
-            <summary>
-            Implements the chamfer matching algorithm on images taking into account both distance from
-            the template pixels to the nearest pixels and orientation alignment between template and image
-            contours.
-            </summary>
-            <param name="img">The edge image where search is performed</param>
-            <param name="templ">The template (an edge image)</param>
-            <param name="contours">The output contours</param>
-            <param name="cost">The cost associated with the matching</param>
-            <param name="templScale">The template scale, use 1 for default</param>
-            <param name="maxMatches">The maximum number of matches, use 20 for default</param>
-            <param name="minMatchDistance">The minimum match distance. use 1.0 for default</param>
-            <param name="padX">PadX, use 3 for default</param>
-            <param name="padY">PadY, use 3 for default</param>
-            <param name="scales">Scales, use 5 for default</param>
-            <param name="minScale">Minimum scale, use 0.6 for default</param>
-            <param name="maxScale">Maximum scale, use 1.6 for default</param>
-            <param name="orientationWeight">Orientation weight, use 0.5 for default</param>
-            <param name="truncate">Truncate, use 20 for default</param>
-            <returns>The number of matches</returns>
-        </member>
-        <member name="F:Emgu.CV.CvInvoke.OpenCVModuleList">
-            <summary>
-            The List of the opencv modules
-            </summary>
-        </member>
         <member name="M:Emgu.CV.CvInvoke.cvSURFParams(System.Double,System.Int32)">
             <summary>
             Create a CvSURFParams using the specific values
@@ -2775,7 +2583,7 @@
             JPEG 2000 images - jp2. 
             </summary>
             <param name="filename">The name of the file to be loaded</param>
-            <param name="loadType">The image loading type</param>
+            <param name="loadType">The load image type</param>
             <returns>The loaded image</returns>
         </member>
         <member name="M:Emgu.CV.CvInvoke.cvSaveImage(System.String,System.IntPtr,System.IntPtr)">
@@ -2786,31 +2594,6 @@
             <param name="image">The image to be saved</param>
             <param name="parameters">The parameters</param>
             <returns></returns>
-        </member>
-        <member name="M:Emgu.CV.CvInvoke.cvDecodeImage(System.IntPtr,Emgu.CV.CvEnum.LOAD_IMAGE_TYPE)">
-            <summary>
-            Decode image stored in the buffer
-            </summary>
-            <param name="bufMat">A pointer to the CvMat that holds the buffer</param>
-            <param name="loadType">The image loading type</param>
-            <returns>A pointer to the Image decoded.</returns>
-        </member>
-        <member name="M:Emgu.CV.CvInvoke.cvEncodeImage(System.String,System.IntPtr,System.IntPtr)">
-            <summary>
-            encode image and store the result as a byte vector.
-            </summary>
-            <param name="ext">The image format</param>
-            <param name="image">The image</param>
-            <param name="parameters">The pointer to the array of intergers, which contains the parameter for encoding, use IntPtr.Zero for default</param>
-            <returns>A pointer to single-row 8uC1 CvMat that represent the encoded image.</returns>
-        </member>
-        <member name="M:Emgu.CV.CvInvoke.cvDecodeImage(System.Byte[],Emgu.CV.CvEnum.LOAD_IMAGE_TYPE)">
-            <summary>
-            Decode image stored in the buffer
-            </summary>
-            <param name="bufMat">The buffer</param>
-            <param name="loadType">The image loading type</param>
-            <returns>A pointer to the Image decoded.</returns>
         </member>
         <member name="M:Emgu.CV.CvInvoke.cvNamedWindow(System.String)">
             <summary>
@@ -3345,6 +3128,15 @@
             <param name="method">Similarity measure, only CV_CONTOUR_TREES_MATCH_I1 is supported</param>
             <param name="threshold">Similarity threshold</param>
             <returns>The value of the matching measure for two contour trees</returns>
+        </member>
+        <member name="M:Emgu.CV.CvInvoke.cvFilter2D(System.IntPtr,System.IntPtr,System.IntPtr,System.Drawing.Point)">
+            <summary>
+            Applies arbitrary linear filter to the image. In-place operation is supported. When the aperture is partially outside the image, the function interpolates outlier pixel values from the nearest pixels that is inside the image
+            </summary>
+            <param name="src">The source image</param>
+            <param name="dst">The destination image</param>
+            <param name="kernel">Convolution kernel, single-channel floating point matrix. If you want to apply different kernels to different channels, split the image using cvSplit into separate color planes and process them individually</param>
+            <param name="anchor">The anchor of the kernel that indicates the relative position of a filtered point within the kernel. The anchor shoud lie within the kernel. The special default value (-1,-1) means that it is at the kernel center</param>
         </member>
         <member name="M:Emgu.CV.CvInvoke.cvCopyMakeBorder(System.IntPtr,System.IntPtr,System.Drawing.Point,Emgu.CV.CvEnum.BORDER_TYPE,Emgu.CV.Structure.MCvScalar)">
             <summary>
@@ -5094,7 +4886,7 @@
             Camera calibration functions
             </summary>
         </member>
-        <member name="M:Emgu.CV.CameraCalibration.CalibrateCamera(Emgu.CV.Structure.MCvPoint3D32f[][],System.Drawing.PointF[][],System.Drawing.Size,Emgu.CV.IntrinsicCameraParameters,Emgu.CV.CvEnum.CALIB_TYPE,Emgu.CV.Structure.MCvTermCriteria,Emgu.CV.ExtrinsicCameraParameters[]@)">
+        <member name="M:Emgu.CV.CameraCalibration.CalibrateCamera(Emgu.CV.Structure.MCvPoint3D32f[][],System.Drawing.PointF[][],System.Drawing.Size,Emgu.CV.IntrinsicCameraParameters,Emgu.CV.CvEnum.CALIB_TYPE,Emgu.CV.ExtrinsicCameraParameters[]@)">
             <summary>
             Estimates intrinsic camera parameters and extrinsic parameters for each of the views
             </summary>
@@ -5102,8 +4894,7 @@
             <param name="imagePoints">The 2D image location of the points. The first index is the index of the image, second index is the index of the point</param>
             <param name="imageSize">The size of the image, used only to initialize intrinsic camera matrix</param>
             <param name="intrinsicParam">The intrisinc parameters, might contains some initial values. The values will be modified by this function.</param>
-            <param name="calibrationType">cCalibration type</param>
-            <param name="termCriteria">The termination criteria</param>
+            <param name="flags">Flags</param>
             <param name="extrinsicParams">The output array of extrinsic parameters.</param>
             <returns>The final reprojection error</returns>
         </member>
@@ -5205,8 +4996,8 @@
             <summary>
             Estimate rigid transformation between 2 point sets.
             </summary>
-            <param name="sourcePoints">The points from the source image</param>
-            <param name="destinationPoints">The corresponding points from the destination image</param>
+            <param name="src">The points from the source image</param>
+            <param name="dest">The corresponding points from the destination image</param>
             <param name="fullAffine">Indicates if full affine should be performed</param>
             <returns>If success, the 2x3 rotation matrix that defines the Affine transform. Otherwise null is returned.</returns>
         </member>
@@ -5300,7 +5091,7 @@
             src1 dot src2 = sumI(src1(I)*src2(I))
             </summary>
             <remarks>In case of multiple channel arrays the results for all channels are accumulated. In particular, cvDotProduct(a,a), where a is a complex vector, will return ||a||^2. The function can process multi-dimensional arrays, row by row, layer by layer and so on.</remarks>
-            <param name="otherArray">The other Array to apply dot product with</param>
+            <param name="src2">The other Array to apply dot product with</param>
             <returns>src1 dot src2</returns>
         </member>
         <member name="M:Emgu.CV.CvArray`1.CheckRange(System.Double,System.Double,System.Drawing.Point@)">
@@ -5331,34 +5122,34 @@
         </member>
         <member name="M:Emgu.CV.CvArray`1.CopyTo(Emgu.CV.CvArray{`0})">
             <summary>
-             Copy the current array to <paramref name="destination"/>
+             Copy the current array to <paramref name="dest"/>
              </summary>
-             <param name="destination"> The destination Array</param>
+             <param name="dest"> The destination Array</param>
         </member>
         <member name="M:Emgu.CV.CvArray`1.SetValue(Emgu.CV.Structure.MCvScalar)">
             <summary> 
-            Set the element of the Array to <paramref name="value"/>
+            Set the element of the Array to <paramref name="val"/>
             </summary>
-            <param name="value"> The value to be set for each element of the Array </param>
+            <param name="val"> The value to be set for each element of the Array </param>
         </member>
         <member name="M:Emgu.CV.CvArray`1.SetValue(System.Double)">
             <summary> 
-            Set the element of the Array to <paramref name="value"/>
+            Set the element of the Array to <paramref name="val"/>
             </summary>
-            <param name="value"> The value to be set for each element of the Array </param>
+            <param name="val"> The value to be set for each element of the Array </param>
         </member>
         <member name="M:Emgu.CV.CvArray`1.SetValue(Emgu.CV.Structure.MCvScalar,Emgu.CV.CvArray{System.Byte})">
             <summary>
-            Set the element of the Array to <paramref name="value"/>, using the specific <paramref name="mask"/>
+            Set the element of the Array to <paramref name="val"/>, using the specific <paramref name="mask"/>
             </summary>
-            <param name="value">The value to be set</param>
+            <param name="val">The value to be set</param>
             <param name="mask">The mask for the operation</param>
         </member>
         <member name="M:Emgu.CV.CvArray`1.SetValue(System.Double,Emgu.CV.CvArray{System.Byte})">
             <summary>
-            Set the element of the Array to <paramref name="value"/>, using the specific <paramref name="mask"/>
+            Set the element of the Array to <paramref name="val"/>, using the specific <paramref name="mask"/>
             </summary>
-            <param name="value">The value to be set</param>
+            <param name="val">The value to be set</param>
             <param name="mask">The mask for the operation</param>
         </member>
         <member name="M:Emgu.CV.CvArray`1.SetRandUniform(System.UInt64,Emgu.CV.Structure.MCvScalar,Emgu.CV.Structure.MCvScalar)">
@@ -5450,15 +5241,15 @@
         </member>
         <member name="M:Emgu.CV.CvArray`1._And(Emgu.CV.CvArray{`0})">
             <summary>
-            Inplace And operation with <paramref name="otherArray"/>
+            Inplace And operation with <paramref name="src2"/>
             </summary>
-            <param name="otherArray">The other array to perform AND operation</param>
+            <param name="src2">The other array to perform AND operation</param>
         </member>
         <member name="M:Emgu.CV.CvArray`1._Or(Emgu.CV.CvArray{`0})">
             <summary>
-            Inplace Or operation with <paramref name="otherArray"/>
+            Inplace Or operation with <paramref name="src2"/>
             </summary>
-            <param name="otherArray">The other array to perform OR operation</param>
+            <param name="src2">The other array to perform OR operation</param>
         </member>
         <member name="M:Emgu.CV.CvArray`1._Not">
             <summary> 
@@ -5950,11 +5741,6 @@
             <param name="col">the col of the element</param>
             <returns>The element on the specific <paramref name="row"/> and <paramref name="col"/></returns>
         </member>
-        <member name="P:Emgu.CV.Matrix`1.Size">
-            <summary> 
-             Get the size of the array
-            </summary>
-        </member>
         <member name="M:Emgu.CV.HomographyMatrix.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
             Constructor used to deserialize homography matrix
@@ -6389,6 +6175,11 @@
             Pause the grab process if it is running.
             </summary>
         </member>
+        <member name="M:Emgu.CV.Capture.Wait">
+            <summary>
+            Wait for the grabbing thread to complete
+            </summary>
+        </member>
         <member name="M:Emgu.CV.Capture.Stop">
             <summary>
             Stop the grabbing thread
@@ -6404,7 +6195,7 @@
             <summary> 
             Retrieve a Gray image frame after Grab()
             </summary>
-            <param name="streamIndex">Stream index. Use 0 for default.</param>
+            <param name="streamIdx">Stream index. Use 0 for default.</param>
             <returns> A Gray image frame</returns>
         </member>
         <member name="M:Emgu.CV.Capture.RetrieveBgrFrame">
@@ -6417,7 +6208,7 @@
             <summary> 
             Retrieve a Bgr image frame after Grab()
             </summary>
-            <param name="streamIndex">Stream index</param>
+            <param name="streamIdx">Stream index</param>
             <returns> A Bgr image frame</returns>
         </member>
         <member name="M:Emgu.CV.Capture.QueryGrayFrame">
@@ -6481,6 +6272,11 @@
             The event to be called when an image is grabbed
             </summary>
         </member>
+        <member name="P:Emgu.CV.Capture.GrabProcessState">
+            <summary>
+            The current state of the grab process
+            </summary>
+        </member>
         <member name="T:Emgu.CV.Capture.CaptureModuleType">
             <summary>
             The type of capture source
@@ -6495,6 +6291,13 @@
             <summary>
             Capture from file using HighGUI
             </summary>
+        </member>
+        <member name="T:Emgu.CV.Capture.GrabEventHandler">
+            <summary>
+            The event handler when an image is grabbed
+            </summary>
+            <param name="sender">The capture</param>
+            <param name="e">The event args</param>
         </member>
         <member name="T:Emgu.CV.IDuplexCaptureCallback">
             <summary>
@@ -6666,11 +6469,6 @@
             The Cascade Classifier
             </summary>
         </member>
-        <member name="M:Emgu.CV.CascadeClassifier.#ctor">
-            <summary>
-            A dummy constructor that mainly aimed for those who would like to inherite this class
-            </summary>
-        </member>
         <member name="M:Emgu.CV.CascadeClassifier.#ctor(System.String)">
             <summary> Create a CascadeClassifier from the specific file</summary>
             <param name="fileName"> The name of the file that contains the CascadeClassifier</param>
@@ -6684,7 +6482,7 @@
             </summary>
             <param name="image">The image where the objects are to be detected from</param>
             <param name="scaleFactor">The factor by which the search window is scaled between the subsequent scans, for example, 1.1 means increasing window by 10%</param>
-            <param name="minNeighbors">Minimum number (minus 1) of neighbor rectangles that makes up an object. All the groups of a smaller number of rectangles than min_neighbors-1 are rejected. If min_neighbors is 0, the function does not any grouping at all and returns all the detected candidate rectangles, which may be useful if the user wants to apply a customized grouping procedure. Use 3 for default.</param>
+            <param name="minNeighbors">Minimum number (minus 1) of neighbor rectangles that makes up an object. All the groups of a smaller number of rectangles than min_neighbors-1 are rejected. If min_neighbors is 0, the function does not any grouping at all and returns all the detected candidate rectangles, which may be useful if the user wants to apply a customized grouping procedure</param>
             <param name="minSize">Minimum window size. Use Size.Empty for default, where it is set to the size of samples the classifier has been trained on (~20x20 for face detection)</param>
             <param name="maxSize">Maxumum window size. Use Size.Empty for default, where the parameter will be ignored.</param>
             <returns>The objects detected, one array per channel</returns>
@@ -7122,60 +6920,6 @@
             </summary>
         </member>
         <member name="P:Emgu.CV.Structure.Rgb.MCvScalar">
-            <summary>
-            Get or Set the equivalent MCvScalar value
-            </summary>
-        </member>
-        <member name="T:Emgu.CV.Structure.Bgr565">
-            <summary> 
-            Defines a Bgr565 (Blue Green Red) color
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.Structure.Bgr565._scalar">
-            <summary>
-            The MCvScalar representation of the color intensity
-            </summary>
-        </member>
-        <member name="M:Emgu.CV.Structure.Bgr565.#ctor(System.Double,System.Double,System.Double)">
-            <summary> Create a Bgr565 color using the specific values</summary>
-            <param name="blue"> The blue value for this color </param>
-            <param name="green"> The green value for this color </param>
-            <param name="red"> The red value for this color </param>
-        </member>
-        <member name="M:Emgu.CV.Structure.Bgr565.#ctor(System.Drawing.Color)">
-            <summary>
-            Create a Bgr565 color using the System.Drawing.Color
-            </summary>
-            <param name="winColor">System.Drawing.Color</param>
-        </member>
-        <member name="M:Emgu.CV.Structure.Bgr565.Equals(Emgu.CV.Structure.Bgr565)">
-            <summary>
-            Return true if the two color equals
-            </summary>
-            <param name="other">The other color to compare with</param>
-            <returns>true if the two color equals</returns>
-        </member>
-        <member name="M:Emgu.CV.Structure.Bgr565.ToString">
-            <summary>
-            Represent this color as a String
-            </summary>
-            <returns>The string representation of this color</returns>
-        </member>
-        <member name="P:Emgu.CV.Structure.Bgr565.Red">
-            <summary> Get or set the intensity of the red color channel </summary>
-        </member>
-        <member name="P:Emgu.CV.Structure.Bgr565.Green">
-            <summary> Get or set the intensity of the green color channel </summary>
-        </member>
-        <member name="P:Emgu.CV.Structure.Bgr565.Blue">
-            <summary> Get or set the intensity of the blue color channel </summary>
-        </member>
-        <member name="P:Emgu.CV.Structure.Bgr565.Dimension">
-            <summary>
-            Get the dimension of this color
-            </summary>
-        </member>
-        <member name="P:Emgu.CV.Structure.Bgr565.MCvScalar">
             <summary>
             Get or Set the equivalent MCvScalar value
             </summary>
@@ -7800,7 +7544,7 @@
             <summary>
             Get the contour that defines the blob
             </summary>
-            <param name="storage">The memory storage when the resulting contour will be allocated</param>
+            <param name="stor">The memory storage when the resulting contour will be allocated</param>
             <returns>The contour of the blob</returns>
         </member>
         <member name="M:Emgu.CV.Cvb.CvBlob.op_Implicit(Emgu.CV.Cvb.CvBlob)~System.IntPtr">
@@ -8708,79 +8452,6 @@
             <param name="gridY">Grid Y, use 9 for default</param>
             <param name="threshold">The distance threshold</param>
         </member>
-        <member name="T:Emgu.CV.Features2D.BOWImgDescriptorExtractor`1">
-            <summary>
-            Class to compute an image descriptor using the bag of visual words. Such a computation consists of the following
-            steps:
-            1. Compute descriptors for a given image and its keypoints set.
-            2. Find the nearest visual words from the vocabulary for each keypoint descriptor.
-            3. Compute the bag-of-words image descriptor as is a normalized histogram of vocabulary words encountered in
-            the image. The i-th bin of the histogram is a frequency of i-th word of the vocabulary in the given image.
-            </summary>
-            <typeparam name="T">The type of values in vocabulary</typeparam>
-        </member>
-        <member name="M:Emgu.CV.Features2D.BOWImgDescriptorExtractor`1.#ctor(Emgu.CV.Features2D.IDescriptorExtractor{Emgu.CV.Structure.Gray,`0},Emgu.CV.Features2D.DescriptorMatcher{`0})">
-            <summary>
-            
-            </summary>
-            <param name="descriptorExtractor">Descriptor extractor that is used to compute descriptors for an input image and its keypoints.</param>
-            <param name="descriptorMatcher">Descriptor matcher that is used to find the nearest word of the trained vocabulary for each keypoint descriptor of the image.</param>
-        </member>
-        <member name="M:Emgu.CV.Features2D.BOWImgDescriptorExtractor`1.SetVocabulary(Emgu.CV.Matrix{`0})">
-            <summary>
-            Sets a visual vocabulary.
-            </summary>
-            <param name="vocabulary">The vocabulary</param>
-        </member>
-        <member name="M:Emgu.CV.Features2D.BOWImgDescriptorExtractor`1.Compute(Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Byte},Emgu.CV.Util.VectorOfKeyPoint)">
-            <summary>
-            Computes an image descriptor using the set visual vocabulary.
-            </summary>
-            <param name="image">Image, for which the descriptor is computed</param>
-            <param name="keypoints">Keypoints detected in the input image.</param>
-            <returns>Image descriptor.</returns>
-        </member>
-        <member name="M:Emgu.CV.Features2D.BOWImgDescriptorExtractor`1.DisposeObject">
-            <summary>
-            Release all the unmanaged memory associated with this object
-            </summary>
-        </member>
-        <member name="T:Emgu.CV.Features2D.BOWKMeansTrainer">
-            <summary>
-            Kmeans-based class to train visual vocabulary using the bag of visual words approach.
-            </summary>
-        </member>
-        <member name="M:Emgu.CV.Features2D.BOWKMeansTrainer.#ctor(System.Int32,Emgu.CV.Structure.MCvTermCriteria,System.Int32,Emgu.CV.CvEnum.KMeansInitType)">
-            <summary>
-            Create a new BOWKmeans trainer
-            </summary>
-            <param name="clusterCount">Number of clusters to split the set by.</param>
-            <param name="termcrit">Specifies maximum number of iterations and/or accuracy (distance the centers move by between the subsequent iterations). Use empty termcrit for default.</param>
-            <param name="attempts">The number of attemps. Use 3 for default</param>
-            <param name="flags">Kmeans initialization flag. Use PPCenters for default.</param>
-        </member>
-        <member name="M:Emgu.CV.Features2D.BOWKMeansTrainer.Add(Emgu.CV.Matrix{System.Single})">
-            <summary>
-            Add the descriptors to the trainer
-            </summary>
-            <param name="descriptors">The descriptors to be added to the trainer</param>
-        </member>
-        <member name="M:Emgu.CV.Features2D.BOWKMeansTrainer.Cluster">
-            <summary>
-            Cluster the descriptors and return the cluster centers
-            </summary>
-            <returns>The cluster centers</returns>
-        </member>
-        <member name="M:Emgu.CV.Features2D.BOWKMeansTrainer.DisposeObject">
-            <summary>
-            Release all the unmanaged memory associated with this object
-            </summary>
-        </member>
-        <member name="P:Emgu.CV.Features2D.BOWKMeansTrainer.DescriptorCount">
-            <summary>
-            Get the number of descriptors
-            </summary>
-        </member>
         <member name="T:Emgu.CV.Features2D.BriefDescriptorExtractor">
             <summary>
             BRIEF Descriptor
@@ -8813,94 +8484,6 @@
         <member name="M:Emgu.CV.Features2D.BriefDescriptorExtractor.DisposeObject">
             <summary>
             Release all the unmanaged resource associated with BRIEF
-            </summary>
-        </member>
-        <member name="T:Emgu.CV.Features2D.Brisk">
-            <summary>
-            BRISK: Binary Robust Invariant Scalable Keypoints
-            </summary>
-        </member>
-        <member name="T:Emgu.CV.Features2D.Feature2DBase`1">
-            <summary>
-            The feature 2D base class
-            </summary>
-            <typeparam name="TDescriptor">The type of data in the descriptor. Can be either float or byte</typeparam>
-        </member>
-        <member name="T:Emgu.CV.Features2D.IKeyPointDetector">
-            <summary>
-            An interface for keypoint detector
-            </summary>
-        </member>
-        <member name="P:Emgu.CV.Features2D.IKeyPointDetector.FeatureDetectorPtr">
-            <summary>
-            Get the pointer to the feature detector. 
-            </summary>
-            <returns>The feature detector</returns>
-        </member>
-        <member name="F:Emgu.CV.Features2D.Feature2DBase`1._featureDetectorPtr">
-            <summary>
-            The pointer to the feature detector
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.Features2D.Feature2DBase`1._descriptorExtractorPtr">
-            <summary>
-            The pointer to the descriptor extractor.
-            </summary>
-        </member>
-        <member name="M:Emgu.CV.Features2D.Feature2DBase`1.ComputeDescriptorsRaw(Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Byte},Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Byte},Emgu.CV.Util.VectorOfKeyPoint)">
-            <summary>
-            Compute the descriptors on the image from the given keypoint locations.
-            </summary>
-            <param name="image">The image to compute descriptors from</param>
-            <param name="keyPoints">The keypoints where the descriptor computation is perfromed</param>
-            <param name="mask">The optional mask, can be null if not needed</param>
-            <returns>The descriptors from the given keypoints</returns>
-        </member>
-        <member name="M:Emgu.CV.Features2D.Feature2DBase`1.DetectAndCompute(Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Byte},Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Byte},Emgu.CV.Util.VectorOfKeyPoint)">
-            <summary>
-            Compute the descriptors on the image from the given keypoint locations.
-            </summary>
-            <param name="image">The image to compute descriptors from</param>
-            <param name="keyPoints">The detected keypoints will be stored in this vector</param>
-            <param name="mask">The optional mask, can be null if not needed</param>
-            <returns>The descriptors from the given keypoints</returns>
-        </member>
-        <member name="M:Emgu.CV.Features2D.Feature2DBase`1.DetectFeatures(Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Byte},Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Byte})">
-            <summary>
-            Detect image features from the given image
-            </summary>
-            <param name="image">The image to detect features from</param>
-            <param name="mask">The optional mask, can be null if not needed</param>
-            <returns>The Image features detected from the given image</returns>
-        </member>
-        <member name="M:Emgu.CV.Features2D.Feature2DBase`1.DisposeObject">
-            <summary>
-            Reset the pointers
-            </summary>
-        </member>
-        <member name="P:Emgu.CV.Features2D.Feature2DBase`1.FeatureDetectorPtr">
-            <summary>
-            Get the pointer to the feature detector. 
-            </summary>
-            <returns>The feature detector</returns>
-        </member>
-        <member name="P:Emgu.CV.Features2D.Feature2DBase`1.DescriptorExtratorPtr">
-            <summary>
-            Get the pointer to the descriptor extractor. 
-            </summary>
-            <returns>The descriptor extractor</returns>
-        </member>
-        <member name="M:Emgu.CV.Features2D.Brisk.#ctor(System.Int32,System.Int32,System.Single)">
-            <summary>
-            Create a BRISK keypoint detector and descriptor extractor.
-            </summary>
-            <param name="thresh">Feature parameters, use 30 for default.</param>
-            <param name="octaves">The number of octave layers. Use 3 for default</param>
-            <param name="patternScale">Pattern scale, use 1.0f for default</param>
-        </member>
-        <member name="M:Emgu.CV.Features2D.Brisk.DisposeObject">
-            <summary>
-            Release the unmanaged resources associated with this object
             </summary>
         </member>
         <member name="T:Emgu.CV.Features2D.DistanceType">
@@ -8946,13 +8529,7 @@
             </summary>
             <typeparam name="T">The type of data to be matched. Can be either float or Byte</typeparam>
         </member>
-        <member name="T:Emgu.CV.Features2D.DescriptorMatcher`1">
-            <summary>
-            Descriptor matcher
-            </summary>
-            <typeparam name="T">The type of data in the descriptor</typeparam>
-        </member>
-        <member name="M:Emgu.CV.Features2D.DescriptorMatcher`1.KnnMatch(Emgu.CV.Matrix{`0},Emgu.CV.Matrix{System.Int32},Emgu.CV.Matrix{System.Single},System.Int32,Emgu.CV.Matrix{System.Byte})">
+        <member name="M:Emgu.CV.Features2D.BruteForceMatcher`1.KnnMatch(Emgu.CV.Matrix{`0},Emgu.CV.Matrix{System.Int32},Emgu.CV.Matrix{System.Single},System.Int32,Emgu.CV.Matrix{System.Byte})">
             <summary>
             Find the k-nearest match
             </summary>
@@ -8961,12 +8538,6 @@
             <param name="distance">The resulting n x <paramref name="k"/> matrix of distance value from the training descriptors</param>
             <param name="k">Number of nearest neighbors to search for</param>
             <param name="mask">Can be null if not needed. An n x 1 matrix. If 0, the query descriptor in the corresponding row will be ignored.</param>
-        </member>
-        <member name="M:Emgu.CV.Features2D.DescriptorMatcher`1.Add(Emgu.CV.Matrix{`0})">
-            <summary>
-            Add the model descriptors
-            </summary>
-            <param name="modelDescriptors">The model discriptors</param>
         </member>
         <member name="M:Emgu.CV.Features2D.BruteForceMatcher`1.#ctor(Emgu.CV.Features2D.DistanceType)">
             <summary>
@@ -8981,6 +8552,12 @@
             <param name="distanceType">The distance type</param>
             <param name="crossCheck">Specify whether or not cross check is needed. Use false for default.</param>
         </member>
+        <member name="M:Emgu.CV.Features2D.BruteForceMatcher`1.Add(Emgu.CV.Matrix{`0})">
+            <summary>
+            Add the model descriptors
+            </summary>
+            <param name="modelDescriptors">The model discriptors</param>
+        </member>
         <member name="M:Emgu.CV.Features2D.BruteForceMatcher`1.DisposeObject">
             <summary>
             Release the unmanaged resource associated with the BruteForceMatcher
@@ -8990,6 +8567,17 @@
              <summary>
             Class for generation of image features which are distributed densely and regularly over the image.
              </summary>
+        </member>
+        <member name="T:Emgu.CV.Features2D.IKeyPointDetector">
+            <summary>
+            An interface for keypoint detector
+            </summary>
+        </member>
+        <member name="P:Emgu.CV.Features2D.IKeyPointDetector.FeatureDetectorPtr">
+            <summary>
+            Get the pointer to the feature detector. 
+            </summary>
+            <returns>The feature detector</returns>
         </member>
         <member name="M:Emgu.CV.Features2D.DenseFeatureDetector.#ctor(System.Single,System.Int32,System.Single,System.Int32,System.Int32,System.Boolean,System.Boolean)">
             <summary>
@@ -9054,6 +8642,65 @@
             Get the feature detector. 
             </summary>
             <returns>The feature detector</returns>
+        </member>
+        <member name="T:Emgu.CV.Features2D.Feature2DBase`1">
+            <summary>
+            The feature 2D base class
+            </summary>
+            <typeparam name="TDescriptor">The type of data in the descriptor. Can be either float or byte</typeparam>
+        </member>
+        <member name="F:Emgu.CV.Features2D.Feature2DBase`1._featureDetectorPtr">
+            <summary>
+            The pointer to the feature detector
+            </summary>
+        </member>
+        <member name="F:Emgu.CV.Features2D.Feature2DBase`1._descriptorExtractorPtr">
+            <summary>
+            The pointer to the descriptor extractor.
+            </summary>
+        </member>
+        <member name="M:Emgu.CV.Features2D.Feature2DBase`1.ComputeDescriptorsRaw(Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Byte},Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Byte},Emgu.CV.Util.VectorOfKeyPoint)">
+            <summary>
+            Compute the descriptors on the image from the given keypoint locations.
+            </summary>
+            <param name="image">The image to compute descriptors from</param>
+            <param name="keyPoints">The keypoints where the descriptor computation is perfromed</param>
+            <param name="mask">The optional mask, can be null if not needed</param>
+            <returns>The descriptors from the given keypoints</returns>
+        </member>
+        <member name="M:Emgu.CV.Features2D.Feature2DBase`1.DetectAndCompute(Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Byte},Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Byte},Emgu.CV.Util.VectorOfKeyPoint)">
+            <summary>
+            Compute the descriptors on the image from the given keypoint locations.
+            </summary>
+            <param name="image">The image to compute descriptors from</param>
+            <param name="keyPoints">The detected keypoints will be stored in this vector</param>
+            <param name="mask">The optional mask, can be null if not needed</param>
+            <returns>The descriptors from the given keypoints</returns>
+        </member>
+        <member name="M:Emgu.CV.Features2D.Feature2DBase`1.DetectFeatures(Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Byte},Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Byte})">
+            <summary>
+            Detect image features from the given image
+            </summary>
+            <param name="image">The image to detect features from</param>
+            <param name="mask">The optional mask, can be null if not needed</param>
+            <returns>The Image features detected from the given image</returns>
+        </member>
+        <member name="M:Emgu.CV.Features2D.Feature2DBase`1.DisposeObject">
+            <summary>
+            Reset the pointers
+            </summary>
+        </member>
+        <member name="P:Emgu.CV.Features2D.Feature2DBase`1.FeatureDetectorPtr">
+            <summary>
+            Get the pointer to the feature detector. 
+            </summary>
+            <returns>The feature detector</returns>
+        </member>
+        <member name="P:Emgu.CV.Features2D.Feature2DBase`1.DescriptorExtratorPtr">
+            <summary>
+            Get the pointer to the descriptor extractor. 
+            </summary>
+            <returns>The descriptor extractor</returns>
         </member>
         <member name="T:Emgu.CV.Features2D.Features2DExtensions">
             <summary>
@@ -9187,19 +8834,6 @@
             <param name="observedFeatures">The Image feature from the observed image</param>
             <param name="k">The number of neighbors to find</param>
             <returns>The matched features</returns>
-        </member>
-        <member name="M:Emgu.CV.Features2D.Features2DTracker`1.ConvertToMatchedImageFeature(Emgu.CV.Util.VectorOfKeyPoint,Emgu.CV.Matrix{`0},Emgu.CV.Util.VectorOfKeyPoint,Emgu.CV.Matrix{`0},Emgu.CV.Matrix{System.Int32},Emgu.CV.Matrix{System.Single},Emgu.CV.Matrix{System.Byte})">
-            <summary>
-            Convert the raw keypoints and descriptors to array of managed structure.
-            </summary>
-            <param name="modelKeyPointVec">The model keypoint vector</param>
-            <param name="modelDescriptorMat">The mode descriptor vector</param>
-            <param name="observedKeyPointVec">The observerd keypoint vector</param>
-            <param name="observedDescriptorMat">The observed descriptor vector</param>
-            <param name="indices">The indices matrix</param>
-            <param name="dists">The distances matrix</param>
-            <param name="mask">The mask</param>
-            <returns>The managed MatchedImageFeature array</returns>
         </member>
         <member name="T:Emgu.CV.Features2D.Features2DTracker`1.SimilarFeature">
             <summary>
@@ -9341,14 +8975,7 @@
         </member>
         <member name="T:Emgu.CV.Features2D.Freak">
             <summary>
-            The FREAK (Fast Retina Keypoint) keypoint descriptor:
-            Alahi, R. Ortiz, and P. Vandergheynst. FREAK: Fast Retina Keypoint. In IEEE Conference on Computer
-            Vision and Pattern Recognition, 2012. CVPR 2012 Open Source Award Winner.
-            The algorithm
-            propose a novel keypoint descriptor inspired by the human visual system and more precisely the retina, coined Fast
-            Retina Key- point (FREAK). A cascade of binary strings is computed by efficiently comparing image intensities over a
-            retinal sampling pattern. FREAKs are in general faster to compute with lower memory load and also more robust than
-            SIFT, SURF or BRISK. They are competitive alternatives to existing keypoints in particular for embedded applications.
+            Freak Descriptor
             </summary>
         </member>
         <member name="M:Emgu.CV.Features2D.Freak.#ctor(System.Boolean,System.Boolean,System.Single,System.Int32)">
@@ -11252,8 +10879,8 @@
             <summary>
             result = val - this, using a mask
             </summary>
-            <param name="val">The value which subtract this image</param>
-            <param name="mask">The mask for subtraction</param>
+            <param name="val">the value which subtract this image</param>
+            <param name="mask"> The mask for subtraction</param>
             <returns>val - this, with mask</returns>
         </member>
         <member name="M:Emgu.CV.Image`2.Add(Emgu.CV.Image{`0,`1})">
@@ -12093,32 +11720,6 @@
             For color images, a HSV representation of the image is first obtained and the V (value) channel is histogram normalized
             </summary>
         </member>
-        <member name="M:Emgu.CV.Image`2.LoadImageFromIplImagePtr(System.IntPtr)">
-            <summary>
-            This function load the image data from the iplImage pointer
-            </summary>
-            <param name="iplImage">The pointer to the iplImage</param>
-        </member>
-        <member name="M:Emgu.CV.Image`2.FromIplImagePtr(System.IntPtr)">
-            <summary>
-            Get the managed image from an unmanaged IplImagePointer
-            </summary>
-            <param name="iplImage">The pointer to the iplImage</param>
-            <returns>The managed image from the iplImage pointer</returns>
-        </member>
-        <member name="M:Emgu.CV.Image`2.FromRawImageData(System.Byte[])">
-            <summary>
-            Decode the image from opencv supported image data. 
-            </summary>
-            <param name="rawData">The byte array that repesent the image in opencv supported format. e.g. this can be a stream of the jpeg file</param>
-            <returns>The image from decoding the rawData</returns>
-        </member>
-        <member name="M:Emgu.CV.Image`2.ToJpegData">
-            <summary>
-            Get the jpeg representation of the image
-            </summary>
-            <returns>An byte array that contains the image as jpeg data</returns>
-        </member>
         <member name="P:Emgu.CV.Image`2.Data">
             <summary>
             Get or Set the data for this matrix. The Get function has O(1) complexity. The Set function make a copy of the data
@@ -12191,11 +11792,6 @@
             For other types of image this property has the same effect as ToBitmap()
             <b>Take extra caution not to use the Bitmap after the Image object is disposed</b>
             The Set property convert the bitmap to this Image type.
-            </summary>
-        </member>
-        <member name="P:Emgu.CV.Image`2.Size">
-            <summary> 
-             Get the size of the array
             </summary>
         </member>
         <member name="T:Emgu.CV.ImageConstants">
@@ -12351,24 +11947,6 @@
             <summary>
             Release the unmanaged memory associated with the LatenSvnDetector
             </summary>
-        </member>
-        <member name="T:Emgu.CV.LevMarqSparse">
-            <summary>
-            LevMarqSparse solver
-            </summary>
-        </member>
-        <member name="M:Emgu.CV.LevMarqSparse.BundleAdjust(Emgu.CV.Structure.MCvPoint3D64f[],Emgu.CV.Structure.MCvPoint2D64f[][],System.Int32[][],Emgu.CV.Matrix{System.Double}[],Emgu.CV.Matrix{System.Double}[],Emgu.CV.Matrix{System.Double}[],Emgu.CV.Matrix{System.Double}[],Emgu.CV.Structure.MCvTermCriteria)">
-            <summary>
-            Useful function to do simple bundle adjustment tasks
-            </summary>
-            <param name="points">Positions of points in global coordinate system (input and output), values will be modified by bundle adjustment</param>
-            <param name="imagePoints">Projections of 3d points for every camera</param>
-            <param name="visibility">Visibility of 3d points for every camera</param>
-            <param name="cameraMatrix">Intrinsic matrices of all cameras (input and output), values will be modified by bundle adjustment</param>
-            <param name="R">rotation matrices of all cameras (input and output), values will be modified by bundle adjustment</param>
-            <param name="T">translation vector of all cameras (input and output), values will be modified by bundle adjustment</param>
-            <param name="distCoeffcients">distortion coefficients of all cameras (input and output), values will be modified by bundle adjustment</param>
-            <param name="termCrit">Termination criteria, a reasonable value will be (30, 1.0e-12) </param>
         </member>
         <member name="T:Emgu.CV.Map`2">
             <summary>
@@ -12822,15 +12400,6 @@
             <param name="polySigma">Standard deviation of the Gaussian that is used to smooth derivatives that are used as a basis for the polynomial expansion. For poly n=5 you can set poly sigma=1.1, for poly n=7 a good value would be poly sigma=1.5</param>
             <param name="flags">The operation flags</param>
         </member>
-        <member name="M:Emgu.CV.OpticalFlow.DualTVL1(Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Byte},Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Byte},Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Single},Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Single})">
-            <summary>
-            Dual TV L1 Optical Flow Algorithm.
-            </summary>
-            <param name="prev">First image</param>
-            <param name="curr">Second image</param>
-            <param name="velx">Horizontal component of the optical flow of floor((prev->width - block_size.width)/shiftSize.width) x floor((prev->height - block_size.height)/shiftSize.height) size. </param>
-            <param name="vely">Vertical component of the optical flow of the same size velx.</param>
-        </member>
         <member name="T:Emgu.CV.CvEnum.NORM_TYPE">
             <summary>
             Type for cvNorm
@@ -13244,972 +12813,872 @@
             Color Conversion code
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGR2BGRA">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGR2BGRA">
             <summary>
             Convert BGR color to BGRA color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.RGB2RGBA">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_RGB2RGBA">
             <summary>
             Convert RGB color to RGBA color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGRA2BGR">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGRA2BGR">
             <summary>
             Convert BGRA color to BGR color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.RGBA2RGB">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_RGBA2RGB">
             <summary>
             Convert RGBA color to RGB color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGR2RGBA">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGR2RGBA">
             <summary>
             Convert BGR color to RGBA color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.RGB2BGRA">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_RGB2BGRA">
             <summary>
             Convert RGB color to BGRA color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.RGBA2BGR">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_RGBA2BGR">
             <summary>
             Convert RGBA color to BGR color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGRA2RGB">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGRA2RGB">
             <summary>
             Convert BGRA color to RGB color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGR2RGB">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGR2RGB">
             <summary>
             Convert BGR color to RGB color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.RGB2BGR">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_RGB2BGR">
             <summary>
             Convert RGB color to BGR color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGRA2RGBA">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGRA2RGBA">
             <summary>
             Convert BGRA color to RGBA color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.RGBA2BGRA">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_RGBA2BGRA">
             <summary>
             Convert RGBA color to BGRA color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGR2GRAY">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGR2GRAY">
             <summary>
             Convert BGR color to GRAY color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.RGB2GRAY">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_RGB2GRAY">
             <summary>
             Convert RGB color to GRAY color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.GRAY2BGR">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_GRAY2BGR">
             <summary>
             Convert GRAY color to BGR color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.GRAY2RGB">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_GRAY2RGB">
             <summary>
             Convert GRAY color to RGB color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.GRAY2BGRA">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_GRAY2BGRA">
             <summary>
             Convert GRAY color to BGRA color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.GRAY2RGBA">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_GRAY2RGBA">
             <summary>
             Convert GRAY color to RGBA color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGRA2GRAY">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGRA2GRAY">
             <summary>
             Convert BGRA color to GRAY color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.RGBA2GRAY">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_RGBA2GRAY">
             <summary>
             Convert RGBA color to GRAY color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGR2BGR565">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGR2BGR565">
             <summary>
             Convert BGR color to BGR565 color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.RGB2BGR565">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_RGB2BGR565">
             <summary>
             Convert RGB color to BGR565 color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGR5652BGR">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGR5652BGR">
             <summary>
             Convert BGR565 color to BGR color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGR5652RGB">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGR5652RGB">
             <summary>
             Convert BGR565 color to RGB color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGRA2BGR565">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGRA2BGR565">
             <summary>
             Convert BGRA color to BGR565 color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.RGBA2BGR565">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_RGBA2BGR565">
             <summary>
             Convert RGBA color to BGR565 color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGR5652BGRA">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGR5652BGRA">
             <summary>
             Convert BGR565 color to BGRA color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGR5652RGBA">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGR5652RGBA">
             <summary>
             Convert BGR565 color to RGBA color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.GRAY2BGR565">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_GRAY2BGR565">
             <summary>
             Convert GRAY color to BGR565 color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGR5652GRAY">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGR5652GRAY">
             <summary>
             Convert BGR565 color to GRAY color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGR2BGR555">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGR2BGR555">
             <summary>
             Convert BGR color to BGR555 color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.RGB2BGR555">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_RGB2BGR555">
             <summary>
             Convert RGB color to BGR555 color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGR5552BGR">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGR5552BGR">
             <summary>
             Convert BGR555 color to BGR color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGR5552RGB">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGR5552RGB">
             <summary>
             Convert BGR555 color to RGB color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGRA2BGR555">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGRA2BGR555">
             <summary>
             Convert BGRA color to BGR555 color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.RGBA2BGR555">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_RGBA2BGR555">
             <summary>
             Convert RGBA color to BGR555 color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGR5552BGRA">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGR5552BGRA">
             <summary>
             Convert BGR555 color to BGRA color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGR5552RGBA">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGR5552RGBA">
             <summary>
             Convert BGR555 color to RGBA color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.GRAY2BGR555">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_GRAY2BGR555">
             <summary>
             Convert GRAY color to BGR555 color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGR5552GRAY">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGR5552GRAY">
             <summary>
             Convert BGR555 color to GRAY color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGR2XYZ">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGR2XYZ">
             <summary>
             Convert BGR color to XYZ color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.RGB2XYZ">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_RGB2XYZ">
             <summary>
             Convert RGB color to XYZ color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.XYZ2BGR">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_XYZ2BGR">
             <summary>
             Convert XYZ color to BGR color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.XYZ2RGB">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_XYZ2RGB">
             <summary>
             Convert XYZ color to RGB color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGR2YCrCb">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGR2YCrCb">
             <summary>
             Convert BGR color to YCrCb color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.RGB2YCrCb">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_RGB2YCrCb">
             <summary>
             Convert RGB color to YCrCb color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YCrCb2BGR">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YCrCb2BGR">
             <summary>
             Convert YCrCb color to BGR color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YCrCb2RGB">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YCrCb2RGB">
             <summary>
             Convert YCrCb color to RGB color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGR2HSV">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGR2HSV">
             <summary>
             Convert BGR color to HSV color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.RGB2HSV">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_RGB2HSV">
             <summary>
             Convert RGB colot to HSV color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGR2Lab">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGR2Lab">
             <summary>
             Convert BGR color to Lab color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.RGB2Lab">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_RGB2Lab">
             <summary>
             Convert RGB color to Lab color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BayerBG2BGR">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BayerBG2BGR">
             <summary>
             Convert BayerBG color to BGR color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BayerGB2BGR">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BayerGB2BGR">
             <summary>
             Convert BayerGB color to BGR color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BayerRG2BGR">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BayerRG2BGR">
             <summary>
             Convert BayerRG color to BGR color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BayerGR2BGR">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BayerGR2BGR">
             <summary>
             Convert BayerGR color to BGR color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BayerBG2RGB">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BayerBG2RGB">
             <summary>
             Convert BayerBG color to BGR color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BayerGB2RGB">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BayerGB2RGB">
             <summary>
             Convert BayerRG color to BGR color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BayerRG2RGB">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BayerRG2RGB">
             <summary>
             Convert BayerRG color to RGB color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BayerGR2RGB">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BayerGR2RGB">
             <summary>
             Convert BayerGR color to RGB color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGR2Luv">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGR2Luv">
             <summary>
             Convert BGR color to Luv color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.RGB2Luv">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_RGB2Luv">
             <summary>
             Convert RGB color to Luv color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGR2HLS">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGR2HLS">
             <summary>
             Convert BGR color to HLS color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.RGB2HLS">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_RGB2HLS">
             <summary>
             Convert RGB color to HLS color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.HSV2BGR">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_HSV2BGR">
             <summary>
             Convert HSV color to BGR color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.HSV2RGB">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_HSV2RGB">
             <summary>
             Convert HSV color to RGB color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.Lab2BGR">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_Lab2BGR">
             <summary>
             Convert Lab color to BGR color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.Lab2RGB">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_Lab2RGB">
             <summary>
             Convert Lab color to RGB color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.Luv2BGR">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_Luv2BGR">
             <summary>
             Convert Luv color to BGR color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.Luv2RGB">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_Luv2RGB">
             <summary>
             Convert Luv color to RGB color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.HLS2BGR">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_HLS2BGR">
             <summary>
             Convert HLS color to BGR color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.HLS2RGB">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_HLS2RGB">
             <summary>
             Convert HLS color to RGB color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BayerBG2BGR_VNG">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BayerBG2BGR_VNG">
             <summary>
             Convert BayerBG pattern to BGR color using VNG
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BayerGB2BGR_VNG">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BayerGB2BGR_VNG">
             <summary>
             Convert BayerGB pattern to BGR color using VNG
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BayerRG2BGR_VNG">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BayerRG2BGR_VNG">
             <summary>
             Convert BayerRG pattern to BGR color using VNG
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BayerGR2BGR_VNG">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BayerGR2BGR_VNG">
             <summary>
             Convert BayerGR pattern to BGR color using VNG
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BayerBG2RGB_VNG">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BayerBG2RGB_VNG">
             <summary>
             Convert BayerBG pattern to RGB color using VNG
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BayerGB2RGB_VNG">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BayerGB2RGB_VNG">
             <summary>
             Convert BayerGB pattern to RGB color using VNG
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BayerRG2RGB_VNG">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BayerRG2RGB_VNG">
             <summary>
             Convert BayerRG pattern to RGB color using VNG
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BayerGR2RGB_VNG">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BayerGR2RGB_VNG">
             <summary>
             Convert BayerGR pattern to RGB color using VNG
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGR2HSV_FULL">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGR2HSV_FULL">
             <summary>
             Convert BGR to HSV
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.RGB2HSV_FULL">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_RGB2HSV_FULL">
             <summary>
             Convert RGB to HSV
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGR2HLS_FULL">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGR2HLS_FULL">
             <summary>
             Convert BGR to HLS
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.RGB2HLS_FULL">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_RGB2HLS_FULL">
             <summary>
             Convert RGB to HLS
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.HSV2BGR_FULL">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_HSV2BGR_FULL">
             <summary>
             Convert HSV color to BGR color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.HSV2RGB_FULL">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_HSV2RGB_FULL">
             <summary>
             Convert HSV color to RGB color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.HLS2BGR_FULL">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_HLS2BGR_FULL">
             <summary>
             Convert HLS color to BGR color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.HLS2RGB_FULL">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_HLS2RGB_FULL">
             <summary>
             Convert HLS color to RGB color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.LBGR2Lab">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_LBGR2Lab">
             <summary>
             Convert sBGR color to Lab color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.LRGB2Lab">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_LRGB2Lab">
             <summary>
             Convert sRGB color to Lab color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.LBGR2Luv">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_LBGR2Luv">
             <summary>
             Convert sBGR color to Luv color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.LRGB2Luv">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_LRGB2Luv">
             <summary>
             Convert sRGB color to Luv color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.Lab2LBGR">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_Lab2LBGR">
             <summary>
             Convert Lab color to sBGR color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.Lab2LRGB">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_Lab2LRGB">
             <summary>
             Convert Lab color to sRGB color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.Luv2LBGR">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_Luv2LBGR">
             <summary>
             Convert Luv color to sBGR color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.Luv2LRGB">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_Luv2LRGB">
             <summary>
             Convert Luv color to sRGB color
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGR2YUV">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BGR2YUV">
             <summary>
             Convert BGR color to YUV
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.RGB2YUV">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_RGB2YUV">
             <summary>
             Convert RGB color to YUV
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2BGR">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2BGR">
             <summary>
             Convert YUV color to BGR
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2RGB">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2RGB">
             <summary>
             Convert YUV color to RGB
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BayerBG2GRAY">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BayerBG2GRAY">
             <summary>
             Convert BayerBG to GRAY
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BayerGB2GRAY">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BayerGB2GRAY">
             <summary>
             Convert BayerGB to GRAY
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BayerRG2GRAY">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BayerRG2GRAY">
             <summary>
             Convert BayerRG to GRAY
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BayerGR2GRAY">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_BayerGR2GRAY">
             <summary>
             Convert BayerGR to GRAY
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV420i2RGB">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV420i2RGB">
             <summary>
             Convert YUV420i to RGB
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV420i2BGR">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV420i2BGR">
             <summary>
             Convert YUV420i to BGR
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV420sp2RGB">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV420sp2RGB">
             <summary>
             Convert YUV420sp to RGB
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV420sp2BGR">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV420sp2BGR">
             <summary>
             Convert YUV320sp to BGR
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV420i2RGBA">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV420i2RGBA">
             <summary>
             Convert YUV320i to RGBA
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV420i2BGRA">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV420i2BGRA">
             <summary>
             Convert YUV420i to BGRA
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV420sp2RGBA">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV420sp2RGBA">
             <summary>
             Convert YUV420sp to RGBA
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV420sp2BGRA">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV420sp2BGRA">
             <summary>
             Convert YUV420sp to BGRA
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2RGB_YV12">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2RGB_YV12">
             <summary>
             Convert YUV (YV12) to RGB
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2BGR_YV12">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2BGR_YV12">
             <summary>
             Convert YUV (YV12) to BGR
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2RGB_IYUV">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2RGB_IYUV">
             <summary>
             Convert YUV (iYUV) to RGB
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2BGR_IYUV">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2BGR_IYUV">
             <summary>
             Convert YUV (iYUV) to BGR
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2RGB_I420">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2RGB_I420">
             <summary>
             Convert YUV (i420) to RGB
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2BGR_I420">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2BGR_I420">
             <summary>
             Convert YUV (i420) to BGR
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV420p2RGB">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV420p2RGB">
             <summary>
             Convert YUV (420p) to RGB
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV420p2BGR">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV420p2BGR">
             <summary>
             Convert YUV (420p) to BGR
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2RGBA_YV12">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2RGBA_YV12">
             <summary>
             Convert YUV (YV12) to RGBA
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2BGRA_YV12">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2BGRA_YV12">
             <summary>
             Convert YUV (YV12) to BGRA
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2RGBA_IYUV">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2RGBA_IYUV">
             <summary>
             Convert YUV (iYUV) to RGBA
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2BGRA_IYUV">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2BGRA_IYUV">
             <summary>
             Convert YUV (iYUV) to BGRA
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2RGBA_I420">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2RGBA_I420">
             <summary>
             Convert YUV (i420) to RGBA
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2BGRA_I420">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2BGRA_I420">
             <summary>
             Convert YUV (i420) to BGRA
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV420p2RGBA">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV420p2RGBA">
             <summary>
             Convert YUV (420p) to RGBA
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV420p2BGRA">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV420p2BGRA">
             <summary>
             Convert YUV (420p) to BGRA
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2GRAY_420">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2GRAY_420">
             <summary>
             Convert YUV 420 to Gray
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2GRAY_NV21">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2GRAY_NV21">
             <summary>
             Convert YUV NV21 to Gray
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2GRAY_NV12">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2GRAY_NV12">
             <summary>
             Convert YUV NV12 to Gray
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2GRAY_YV12">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2GRAY_YV12">
             <summary>
             Convert YUV YV12 to Gray
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2GRAY_IYUV">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2GRAY_IYUV">
             <summary>
             Convert YUV (iYUV) to Gray
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2GRAY_I420">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2GRAY_I420">
             <summary>
             Convert YUV (i420) to Gray
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV420sp2GRAY">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV420sp2GRAY">
             <summary>
             Convert YUV (420sp) to Gray
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV420p2GRAY">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV420p2GRAY">
             <summary>
             Convert YUV (420p) to Gray
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2RGB_UYVY">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2RGB_UYVY">
             <summary>
             Convert YUV (UYVY) to RGB
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2BGR_UYVY">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2BGR_UYVY">
             <summary>
             Convert YUV (UYVY) to BGR
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2RGB_Y422">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2RGB_Y422">
             <summary>
             Convert YUV (Y422) to RGB
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2BGR_Y422">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2BGR_Y422">
             <summary>
             Convert YUV (Y422) to BGR
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2RGB_UYNV">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2RGB_UYNV">
             <summary>
             Convert YUV (UYNY) to RGB
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2BGR_UYNV">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2BGR_UYNV">
             <summary>
             Convert YUV (UYNV) to BGR
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2RGBA_UYVY">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2RGBA_UYVY">
             <summary>
             Convert YUV (UYVY) to RGBA
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2BGRA_UYVY">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2BGRA_UYVY">
             <summary>
             Convert YUV (VYUY) to BGRA
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2RGBA_Y422">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2RGBA_Y422">
             <summary>
             Convert YUV (Y422) to RGBA
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2BGRA_Y422">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2BGRA_Y422">
             <summary>
             Convert YUV (Y422) to BGRA
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2RGBA_UYNV">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2RGBA_UYNV">
             <summary>
             Convert YUV (UYNV) to RGBA 
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2BGRA_UYNV">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2BGRA_UYNV">
             <summary>
             Convert YUV (UYNV) to BGRA
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2RGB_YUY2">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2RGB_YUY2">
             <summary>
             Convert YUV (YUY2) to RGB
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2BGR_YUY2">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2BGR_YUY2">
             <summary>
             Convert YUV (YUY2) to BGR
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2RGB_YVYU">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2RGB_YVYU">
             <summary>
             Convert YUV (YVYU) to RGB
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2BGR_YVYU">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2BGR_YVYU">
             <summary>
             Convert YUV (YVYU) to BGR
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2RGB_YUYV">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2RGB_YUYV">
             <summary>
             Convert YUV (YUYV) to RGB
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2BGR_YUYV">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2BGR_YUYV">
             <summary>
             Convert YUV (YUYV) to BGR 
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2RGB_YUNV">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2RGB_YUNV">
             <summary>
             Convert YUV (YUNV) to RGB
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2BGR_YUNV">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2BGR_YUNV">
             <summary>
             Convert YUV (YUNV) to BGR
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2RGBA_YUY2">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2RGBA_YUY2">
             <summary>
             Convert YUV (YUY2) to RGBA
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2BGRA_YUY2">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2BGRA_YUY2">
             <summary>
             Convert YUV (YUY2) to BGRA
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2RGBA_YVYU">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2RGBA_YVYU">
             <summary>
             Convert YUV (YVYU) to RGBA
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2BGRA_YVYU">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2BGRA_YVYU">
             <summary>
             Convert YUV (YVYU) to BGRA
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2RGBA_YUYV">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2RGBA_YUYV">
             <summary>
             Convert YUV (YUYV) to RGBA
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2BGRA_YUYV">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2BGRA_YUYV">
             <summary>
             Convert YUV (YUYV) to BGRA
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2RGBA_YUNV">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2RGBA_YUNV">
             <summary>
             Convert YUV (YUNV) to RGBA
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2BGRA_YUNV">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2BGRA_YUNV">
             <summary>
             Convert YUV (YUNV) to BGRA
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2GRAY_UYVY">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2GRAY_UYVY">
             <summary>
             Convert YUV (UYVY) to Gray
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2GRAY_YUY2">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2GRAY_YUY2">
             <summary>
             Convert YUV (YUY2) to Gray
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2GRAY_Y422">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2GRAY_Y422">
             <summary>
             Convert YUV (Y422) to Gray
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2GRAY_UYNV">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2GRAY_UYNV">
             <summary>
             Convert YUV (UYNV) to Gray
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2GRAY_YVYU">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2GRAY_YVYU">
             <summary>
             Convert YUV (YVYU) to Gray
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2GRAY_YUYV">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2GRAY_YUYV">
             <summary>
             Convert YUV (YUYV) to Gray
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.YUV2GRAY_YUNV">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_YUV2GRAY_YUNV">
             <summary>
             Convert YUV (YUNV) to Gray
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.RGBA2mRGBA">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_RGBA2mRGBA">
             <summary>
             Alpha premultiplication
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.mRGBA2RGBA">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_mRGBA2RGBA">
             <summary>
             Alpha premultiplication
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.RGB2YUV_I420">
-            <summary>
-            Convert RGB to YUV_I420
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGR2YUV_I420">
-            <summary>
-            Convert BGR to YUV_I420
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.RGB2YUV_IYUV">
-            <summary>
-            Convert RGB to YUV_IYUV
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGR2YUV_IYUV">
-            <summary>
-            Convert BGR to YUV_IYUV
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.RGBA2YUV_I420">
-            <summary>
-            Convert RGBA to YUV_I420
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGRA2YUV_I420">
-            <summary>
-            Convert BGRA to YUV_I420
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.RGBA2YUV_IYUV">
-            <summary>
-            Convert RGBA to YUV_IYUV
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGRA2YUV_IYUV">
-            <summary>
-            Convert BGRA to YUV_IYUV
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.RGB2YUV_YV12">
-            <summary>
-            Convert RGB to YUV_YV12
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGR2YUV_YV12">
-            <summary>
-            Convert BGR to YUV_YV12
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.RGBA2YUV_YV12">
-            <summary>
-            Convert RGBA to YUV_YV12
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BGRA2YUV_YV12">
-            <summary>
-            Convert BGRA to YUV_YV12
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BayerBG2BGR_EA">
-            <summary>
-            Convert BayerBG to BGR (Edge-Aware Demosaicing)
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BayerGB2BGR_EA">
-            <summary>
-            Convert BayerGB to BGR (Edge-Aware Demosaicing)
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BayerRG2BGR_EA">
-            <summary>
-            Convert BayerRG to BGR (Edge-Aware Demosaicing)
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BayerGR2BGR_EA">
-            <summary>
-            Convert BayerGR to BGR (Edge-Aware Demosaicing)
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BayerBG2RGB_EA">
-            <summary>
-            Convert BayerBG to RGB (Edge-Aware Demosaicing)
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BayerGB2RGB_EA">
-            <summary>
-            Convert BayerGB to RGB (Edge-Aware Demosaicing)
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BayerRG2RGB_EA">
-            <summary>
-            Convert BayerRG to RGB (Edge-Aware Demosaicing)
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.BayerGR2RGB_EA">
-            <summary>
-            Convert BayerGR to RGB (Edge-Aware Demosaicing)
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.COLORCVT_MAX">
+        <member name="F:Emgu.CV.CvEnum.COLOR_CONVERSION.CV_COLORCVT_MAX">
             <summary>
             The max number, do not use
             </summary>
@@ -15889,14 +15358,14 @@
             Transparent
             </summary>
         </member>
-        <member name="F:Emgu.CV.CvEnum.BORDER_TYPE.DEFAULT">
-            <summary>
-            The default border interpolation type.
-            </summary>
-        </member>
         <member name="F:Emgu.CV.CvEnum.BORDER_TYPE.ISOLATED">
             <summary>
-            do not look outside of ROI
+            Isolated
+            </summary>
+        </member>
+        <member name="F:Emgu.CV.CvEnum.BORDER_TYPE.BORDER_DEFAULT">
+            <summary>
+            The default border interpolation type.
             </summary>
         </member>
         <member name="T:Emgu.CV.CvEnum.HAAR_DETECTION_TYPE">
@@ -16362,6 +15831,16 @@
             Hot
             </summary>
         </member>
+        <member name="F:Emgu.CV.CvEnum.ColorMapType.Mkpj1">
+            <summary>
+            Mkpj1
+            </summary>
+        </member>
+        <member name="F:Emgu.CV.CvEnum.ColorMapType.Mkpj2">
+            <summary>
+            Mpkj2
+            </summary>
+        </member>
         <member name="T:Emgu.CV.Structure.Cuboid">
             <summary>
             A solid resembling a cube, with the rectangular faces not all equal; a rectangular parallelepiped.
@@ -16387,86 +15866,6 @@
         <member name="P:Emgu.CV.Structure.Cuboid.Centroid">
             <summary>
             Get the centroid of this cuboid
-            </summary>
-        </member>
-        <member name="T:Emgu.CV.Structure.CvStructSizes">
-            <summary>
-            This is used to hold the sizes of the Open CV structures
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.Structure.CvStructSizes.CvPoint">
-            <summary>
-            The size of CvPoint
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.Structure.CvStructSizes.CvPoint2D32f">
-            <summary>
-            The size of CvPoint2D32f
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.Structure.CvStructSizes.CvPoint3D32f">
-            <summary>
-            The size of CvPoint3D32f
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.Structure.CvStructSizes.CvSize">
-            <summary>
-            The size of CvSize
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.Structure.CvStructSizes.CvSize2D32f">
-            <summary>
-            The size of CvSize2D32f
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.Structure.CvStructSizes.CvScalar">
-            <summary>
-            The size of CvScalar
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.Structure.CvStructSizes.CvRect">
-            <summary>
-            The size of CvRect
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.Structure.CvStructSizes.CvBox2D">
-            <summary>
-            The size of CvBox2D
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.Structure.CvStructSizes.CvMat">
-            <summary>
-            The size of CvMat
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.Structure.CvStructSizes.CvMatND">
-            <summary>
-            The size of CvMatND
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.Structure.CvStructSizes.CvHistogram">
-            <summary>
-            The size of CvHistogram
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.Structure.CvStructSizes.CvTermCriteria">
-            <summary>
-            The size of CvTermCriteria
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.Structure.CvStructSizes.CvSeq">
-            <summary>
-            The size of CvSeq
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.Structure.CvStructSizes.CvContour">
-            <summary>
-            The size of CvContour
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.Structure.CvStructSizes.IplImage">
-            <summary>
-            The size of IplImage
             </summary>
         </member>
         <member name="T:Emgu.CV.Structure.MCvAvgComp">
@@ -17771,16 +17170,6 @@
         <member name="P:Emgu.CV.Structure.MCvMat.NumberOfChannels">
             <summary>
             Get the number of channels
-            </summary>
-        </member>
-        <member name="T:Emgu.CV.Structure.MCvMatConstants">
-            <summary>
-            Constants used by the MCvMat structure
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.Structure.MCvMatConstants.TypeOffset">
-            <summary>
-            Offset of roi
             </summary>
         </member>
         <member name="T:Emgu.CV.Structure.MCvMatND">
@@ -19295,8 +18684,8 @@
         </member>
         <member name="F:Emgu.CV.Structure.MCvSURFParams.Extended">
             <summary>
-            Zero means basic descriptors (64 elements each),
-            Non-zero means extended descriptors (128 elements each)
+            False means basic descriptors (64 elements each),
+            True means extended descriptors (128 elements each)
             </summary>
         </member>
         <member name="F:Emgu.CV.Structure.MCvSURFParams.Upright">
@@ -20595,6 +19984,11 @@
             Use Block Matching algorithm to find stereo correspondence
             </summary>
         </member>
+        <member name="F:Emgu.CV.StereoBM.State">
+            <summary>
+            The state structure
+            </summary>
+        </member>
         <member name="M:Emgu.CV.StereoBM.#ctor(Emgu.CV.CvEnum.STEREO_BM_TYPE,System.Int32)">
             <summary>
             Create a stereoBMState
@@ -20665,21 +20059,21 @@
             SGBM (Semi-global block matching)
             </summary>
         </member>
-        <member name="M:Emgu.CV.StereoSGBM.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,Emgu.CV.StereoSGBM.Mode)">
+        <member name="M:Emgu.CV.StereoSGBM.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)">
             <summary>
             Create a stereo disparity solver using StereoSGBM algorithm (combination of H. Hirschmuller + K. Konolige approaches) 
             </summary>
-            <param name="minDisparity">Minimum possible disparity value. Normally, it is zero but sometimes rectification algorithms can shift images, so this parameter needs to be adjusted accordingly.</param>
-            <param name="numDisparities">Maximum disparity minus minimum disparity. The value is always greater than zero. In the current implementation, this parameter must be divisible by 16.</param>
-            <param name="blockSize">Matched block size. It must be an odd number &gt;=1 . Normally, it should be somewhere in the 3..11 range. Use 0 for default. </param>
-            <param name="p1">The first parameter controlling the disparity smoothness. It is the penalty on the disparity change by plus or minus 1 between neighbor pixels. Reasonably good value is 8*number_of_image_channels*SADWindowSize*SADWindowSize. Use 0 for default</param>
-            <param name="p2">The second parameter controlling the disparity smoothness. It is the penalty on the disparity change by more than 1 between neighbor pixels. The algorithm requires <paramref name="p2"/> &gt; <paramref name="p1"/>. Reasonably good value is 32*number_of_image_channels*SADWindowSize*SADWindowSize. Use 0 for default</param>
+            <param name="minDisparity"></param>
+            <param name="numDisparities"></param>
+            <param name="SADWindowSize">Set this to 0 for default</param>
+            <param name="P1">Use 0 for default</param>
+            <param name="P2">Use 0 for default</param>
             <param name="disp12MaxDiff">Use 0 for default</param>
             <param name="preFilterCap">Use 0 for default</param>
             <param name="uniquenessRatio">Use 0 for default</param>
             <param name="speckleWindowSize">Use 0 for default</param>
             <param name="speckleRange">Use 0 for default</param>
-            <param name="mode">Use SGBM for default</param>
+            <param name="fullDP">Use false for default</param>
         </member>
         <member name="M:Emgu.CV.StereoSGBM.FindStereoCorrespondence(Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Byte},Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Byte},Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Int16})">
             <summary>
@@ -20693,21 +20087,6 @@
         <member name="M:Emgu.CV.StereoSGBM.DisposeObject">
             <summary>
             Release the unmanged memory associated with this stereo solver
-            </summary>
-        </member>
-        <member name="T:Emgu.CV.StereoSGBM.Mode">
-            <summary>
-            The SGBM mode
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.StereoSGBM.Mode.SGBM">
-            <summary>
-            This is the defult mode, the algorithm is single-pass, which means that you consider only 5 directions instead of 8
-            </summary>
-        </member>
-        <member name="F:Emgu.CV.StereoSGBM.Mode.HH">
-            <summary>
-            Run the full-scale two-pass dynamic programming algorithm. It will consume O(W*H*numDisparities) bytes, which is large for 640x480 stereo and huge for HD-size pictures.
             </summary>
         </member>
         <member name="T:Emgu.CV.StructuringElementEx">
@@ -20908,6 +20287,13 @@
             <param name="rTable">Lookup table for the R channel</param>
             <param name="aTable">Lookup table for the A channel</param>
         </member>
+        <member name="M:Emgu.CV.Util.CvToolbox.GetModuleInfo(System.String@,System.String@)">
+            <summary>
+            Returns information about one of or all of the registered modules
+            </summary>
+            <param name="pluginName">The list of names and versions of the optimized plugins that CXCORE was able to find and load</param>
+            <param name="versionName">Information about the module(s), including version</param>
+        </member>
         <member name="M:Emgu.CV.Util.CvToolbox.OptimizeCV(System.Boolean)">
             <summary>
             Enable or diable IPL optimization for opencv
@@ -20921,19 +20307,12 @@
             <param name="typeOfDepth">The depth of type</param>
             <returns>OpenCV Matrix depth</returns>
         </member>
-        <member name="M:Emgu.CV.Util.CvToolbox.GetMatrixFromArrays``1(``0[][])">
+        <member name="M:Emgu.CV.Util.CvToolbox.GetMatrixFromDescriptors``1(``0[][])">
             <summary>
-            Convert arrays of data to matrix
+            Convert an array of descriptors to row by row matrix
             </summary>
-            <param name="data">Arrays of data</param>
-            <returns>A two dimension matrix that represent the array</returns>
-        </member>
-        <member name="M:Emgu.CV.Util.CvToolbox.GetMatrixFromPoints(Emgu.CV.Structure.MCvPoint2D64f[][])">
-            <summary>
-            Convert arrays of points to matrix
-            </summary>
-            <param name="points">Arrays of points</param>
-            <returns>A two dimension matrix that represent the points</returns>
+            <param name="descriptors">An array of descriptors</param>
+            <returns>A matrix where each row is a descriptor</returns>
         </member>
         <member name="M:Emgu.CV.Util.CvToolbox.GetMinMax(System.Collections.Generic.IEnumerable{Emgu.CV.Structure.MCvPoint3D64f},Emgu.CV.Structure.MCvPoint3D64f@,Emgu.CV.Structure.MCvPoint3D64f@)">
             <summary>
@@ -20979,6 +20358,13 @@
             The event that will be raised when the unmanaged code send over data
             </summary>
         </member>
+        <member name="T:Emgu.CV.Util.DataLogger.DataCallbackHandler">
+            <summary>
+            Define the type of callback when data is received
+            </summary>
+            <param name="sender">The DataLogger that send the message</param>
+            <param name="e">The data</param>
+        </member>
         <member name="T:Emgu.CV.Util.DataLogger`1">
             <summary>
             A generic version of the DataLogger
@@ -21020,47 +20406,16 @@
             Pointer to the unmanaged object
             </summary>
         </member>
+        <member name="T:Emgu.CV.Util.DataLogger`1.DataCallbackHandler">
+            <summary>
+            Define the type of callback when data is received
+            </summary>
+            <param name="sender">The DataLogger that send the message</param>
+            <param name="e">The data</param>
+        </member>
         <member name="E:Emgu.CV.Util.DataLoggerHelper.OnDataReceived">
             <summary>
             The event that will be raised when the unmanaged code send over data
-            </summary>
-        </member>
-        <member name="T:Emgu.CV.Util.Mat">
-            <summary>
-            The equavailent of cv::Mat, should only be used if you know what you are doing.
-            In most case you should use the Matrix class instead
-            </summary>
-        </member>
-        <member name="M:Emgu.CV.Util.Mat.#ctor">
-            <summary>
-            Create an empty cv::Mat
-            </summary>
-        </member>
-        <member name="M:Emgu.CV.Util.Mat.CopyTo(System.IntPtr)">
-            <summary>
-            Copy the data in this cv::Mat to a CvArray
-            </summary>
-            <param name="cvArray">The CvArray to copy to</param>
-        </member>
-        <member name="M:Emgu.CV.Util.Mat.From(System.IntPtr)">
-            <summary>
-            Make this to represent the cvArray without data copy
-            </summary>
-            <param name="cvArray">The cvArray to make header from</param>
-        </member>
-        <member name="M:Emgu.CV.Util.Mat.DisposeObject">
-            <summary>
-            Release all the unmanaged memory associated with this object.
-            </summary>
-        </member>
-        <member name="P:Emgu.CV.Util.Mat.Size">
-            <summary>
-            The size of this matrix
-            </summary>
-        </member>
-        <member name="P:Emgu.CV.Util.Mat.ElementSize">
-            <summary>
-            The size of the elements in this matrix
             </summary>
         </member>
         <member name="T:Emgu.CV.Util.StructSize">
@@ -21396,177 +20751,6 @@
             <param name="index">The index</param>
             <returns>The item in the specific index</returns>
         </member>
-        <member name="T:Emgu.CV.Util.VectorOfMat">
-            <summary>
-            Wraped class of the C++ standard vector of cv::Mat
-            </summary>
-        </member>
-        <member name="M:Emgu.CV.Util.VectorOfMat.#ctor">
-            <summary>
-            Create an empty standard vector of Mat
-            </summary>
-        </member>
-        <member name="M:Emgu.CV.Util.VectorOfMat.#ctor(Emgu.CV.Util.Mat[])">
-            <summary>
-            Creat a standard vector of Mats
-            </summary>
-            <param name="values">The values to be pushed into the vector</param>
-        </member>
-        <member name="M:Emgu.CV.Util.VectorOfMat.Push(Emgu.CV.Util.Mat)">
-            <summary>
-            Push a Mat into the standard vector
-            </summary>
-            <param name="value">The value to be pushed to the vector</param>
-        </member>
-        <member name="M:Emgu.CV.Util.VectorOfMat.Push(Emgu.CV.Util.Mat[])">
-            <summary>
-            Push multiple Mat into the standard vector
-            </summary>
-            <param name="values">The values to be pushed to the vector</param>
-        </member>
-        <member name="M:Emgu.CV.Util.VectorOfMat.Push``1(Emgu.CV.CvArray{``0})">
-            <summary>
-            Convert a CvArray to cv::Mat and push it into the vector
-            </summary>
-            <typeparam name="TDepth">The type of depth of the cvArray</typeparam>
-            <param name="cvArray">The cvArray to be pushed into the vector</param>
-        </member>
-        <member name="M:Emgu.CV.Util.VectorOfMat.Push``1(Emgu.CV.CvArray{``0}[])">
-            <summary>
-            Convert a group of CvArray to cv::Mat and push them into the vector
-            </summary>
-            <typeparam name="TDepth">The type of depth of the cvArray</typeparam>
-            <param name="values">The values to be pushed to the vector</param>
-        </member>
-        <member name="M:Emgu.CV.Util.VectorOfMat.Clear">
-            <summary>
-            Clear the vector
-            </summary>
-        </member>
-        <member name="M:Emgu.CV.Util.VectorOfMat.DisposeObject">
-            <summary>
-            Release the standard vector
-            </summary>
-        </member>
-        <member name="P:Emgu.CV.Util.VectorOfMat.Size">
-            <summary>
-            Get the size of the vector
-            </summary>
-        </member>
-        <member name="P:Emgu.CV.Util.VectorOfMat.Item(System.Int32)">
-            <summary>
-            Get the Mat from the specific place in the vector 
-            </summary>
-            <param name="index">The index</param>
-            <returns>The mat</returns>
-        </member>
-        <member name="T:Emgu.CV.Util.VectorOfPoint">
-            <summary>
-            Wraped class of the C++ standard vector of Point.
-            </summary>
-        </member>
-        <member name="M:Emgu.CV.Util.VectorOfPoint.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-            <summary>
-            Constructor used to deserialize runtime serialized object
-            </summary>
-            <param name="info">The serialization info</param>
-            <param name="context">The streaming context</param>
-        </member>
-        <member name="M:Emgu.CV.Util.VectorOfPoint.#ctor">
-            <summary>
-            Create an empty standard vector of Point
-            </summary>
-        </member>
-        <member name="M:Emgu.CV.Util.VectorOfPoint.#ctor(System.Int32)">
-            <summary>
-            Create an standard vector of Point of the specific size
-            </summary>
-            <param name="size">The size of the vector</param>
-        </member>
-        <member name="M:Emgu.CV.Util.VectorOfPoint.Push(System.Drawing.Point[])">
-            <summary>
-            Push an array of value into the standard vector
-            </summary>
-            <param name="value">The value to be pushed to the vector</param>
-        </member>
-        <member name="M:Emgu.CV.Util.VectorOfPoint.Clear">
-            <summary>
-            Clear the vector
-            </summary>
-        </member>
-        <member name="M:Emgu.CV.Util.VectorOfPoint.ToArray">
-            <summary>
-            Convert the standard vector to an array of Point
-            </summary>
-            <returns>An array of Point</returns>
-        </member>
-        <member name="M:Emgu.CV.Util.VectorOfPoint.DisposeObject">
-            <summary>
-            Release the standard vector
-            </summary>
-        </member>
-        <member name="M:Emgu.CV.Util.VectorOfPoint.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-            <summary>
-            A function used for runtime serialization of the object
-            </summary>
-            <param name="info">Serialization info</param>
-            <param name="context">Streaming context</param>
-        </member>
-        <member name="P:Emgu.CV.Util.VectorOfPoint.Size">
-            <summary>
-            Get the size of the vector
-            </summary>
-        </member>
-        <member name="P:Emgu.CV.Util.VectorOfPoint.StartAddress">
-            <summary>
-            The pointer to the first element on the vector. In case of an empty vector, IntPtr.Zero will be returned.
-            </summary>
-        </member>
-        <member name="P:Emgu.CV.Util.VectorOfPoint.Item(System.Int32)">
-            <summary>
-            Get the item in the specific index
-            </summary>
-            <param name="index">The index</param>
-            <returns>The item in the specific index</returns>
-        </member>
-        <member name="T:Emgu.CV.Util.VectorOfVectorOfPoint">
-            <summary>
-            Wraped class of the C++ standard vector of standard vector of Point.
-            </summary>
-        </member>
-        <member name="M:Emgu.CV.Util.VectorOfVectorOfPoint.#ctor">
-            <summary>
-            Create an empty standard vector of standard of Point
-            </summary>
-        </member>
-        <member name="M:Emgu.CV.Util.VectorOfVectorOfPoint.Clear">
-            <summary>
-            Clear the vector
-            </summary>
-        </member>
-        <member name="M:Emgu.CV.Util.VectorOfVectorOfPoint.ToArray">
-            <summary>
-            Convert the standard vector to arrays of Point
-            </summary>
-            <returns>Arrays of Point</returns>
-        </member>
-        <member name="M:Emgu.CV.Util.VectorOfVectorOfPoint.DisposeObject">
-            <summary>
-            Release the standard vector
-            </summary>
-        </member>
-        <member name="P:Emgu.CV.Util.VectorOfVectorOfPoint.Size">
-            <summary>
-            Get the size of the vector
-            </summary>
-        </member>
-        <member name="P:Emgu.CV.Util.VectorOfVectorOfPoint.Item(System.Int32)">
-            <summary>
-            Get the item in the specific index
-            </summary>
-            <param name="index">The index</param>
-            <returns>The item in the specific index</returns>
-        </member>
         <member name="T:Emgu.CV.Util.ZlibCompression">
             <summary>
             Use zlib included in OpenCV to perform in-memory binary compression and decompression
@@ -21588,7 +20772,7 @@
             <param name="estimatedUncompressedSize">The estimated size fo the uncompress data. Must be large enough to hold the decompressed data.</param>
             <returns>The decompressed data</returns>
         </member>
-        <member name="T:Emgu.CV.VideoSurveillance.BackgroundSubtractor">
+        <member name="T:Emgu.CV.VideoSurveillance.BackgroundSubstractor">
             <summary>
             An abstract class that can be use the perform background / forground detection.
             </summary>
@@ -21605,7 +20789,7 @@
             </summary>
             <param name="image">The image which will be used to update the BGFG detector</param>
         </member>
-        <member name="P:Emgu.CV.VideoSurveillance.IBGFGDetector`1.ForegroundMask">
+        <member name="P:Emgu.CV.VideoSurveillance.IBGFGDetector`1.ForgroundMask">
             <summary>
             Get the mask of the forground
             </summary>
@@ -21615,35 +20799,35 @@
             Get the mask of the background
             </summary>
         </member>
-        <member name="M:Emgu.CV.VideoSurveillance.BackgroundSubtractor.Update(Emgu.CV.Image{Emgu.CV.Structure.Bgr,System.Byte},System.Double)">
+        <member name="M:Emgu.CV.VideoSurveillance.BackgroundSubstractor.Update(Emgu.CV.Image{Emgu.CV.Structure.Bgr,System.Byte},System.Double)">
             <summary>
             Update the background model
             </summary>
             <param name="image">The image that is used to update the background model</param>
             <param name="learningRate">Use -1 for default</param>
         </member>
-        <member name="M:Emgu.CV.VideoSurveillance.BackgroundSubtractor.Update(Emgu.CV.Image{Emgu.CV.Structure.Bgr,System.Byte})">
+        <member name="M:Emgu.CV.VideoSurveillance.BackgroundSubstractor.Update(Emgu.CV.Image{Emgu.CV.Structure.Bgr,System.Byte})">
             <summary>
             Update the background model
             </summary>
             <param name="image">The image that is used to update the background model</param>
         </member>
-        <member name="M:Emgu.CV.VideoSurveillance.BackgroundSubtractor.ReleaseManagedResources">
+        <member name="M:Emgu.CV.VideoSurveillance.BackgroundSubstractor.ReleaseManagedResources">
             <summary>
             Release all managed resources associated with this background model.
             </summary>
         </member>
-        <member name="P:Emgu.CV.VideoSurveillance.BackgroundSubtractor.ForegroundMask">
+        <member name="P:Emgu.CV.VideoSurveillance.BackgroundSubstractor.ForgroundMask">
             <summary>
             Get the mask of the forground
             </summary>
         </member>
-        <member name="P:Emgu.CV.VideoSurveillance.BackgroundSubtractor.BackgroundMask">
+        <member name="P:Emgu.CV.VideoSurveillance.BackgroundSubstractor.BackgroundMask">
             <summary>
             Get the mask of the background
             </summary>
         </member>
-        <member name="T:Emgu.CV.VideoSurveillance.BackgroundSubtractorMOG">
+        <member name="T:Emgu.CV.VideoSurveillance.BackgroundSubstractorMOG">
             <summary>
             Gaussian Mixture-based Backbround/Foreground Segmentation Algorithm.
             The class implements the following algorithm:
@@ -21653,21 +20837,21 @@
             http://personal.ee.surrey.ac.uk/Personal/R.Bowden/publications/avbs01/avbs01.pdf
             </summary>
         </member>
-        <member name="M:Emgu.CV.VideoSurveillance.BackgroundSubtractorMOG.#ctor(System.Int32,System.Int32,System.Double,System.Double)">
+        <member name="M:Emgu.CV.VideoSurveillance.BackgroundSubstractorMOG.#ctor(System.Int32,System.Int32,System.Double,System.Double)">
             <summary>
             Create an "Improved adaptive Gausian mixture model for background subtraction".
             </summary>
             <param name="history">The length of the history. Use 0 for default.</param>
-            <param name="nMixtures">The maximum number of gaussian mixtures. Use 0 for default.</param>
+            <param name="nmixtures">The maximum number of gaussian mixtures. Use 0 for default.</param>
             <param name="backgroundRatio">Use 0 for default.</param>
             <param name="noiseSigma">Use 0 for default.</param>
         </member>
-        <member name="M:Emgu.CV.VideoSurveillance.BackgroundSubtractorMOG.DisposeObject">
+        <member name="M:Emgu.CV.VideoSurveillance.BackgroundSubstractorMOG.DisposeObject">
             <summary>
             Release all the unmanaged memory associated with this background model.
             </summary>
         </member>
-        <member name="T:Emgu.CV.VideoSurveillance.BackgroundSubtractorMOG2">
+        <member name="T:Emgu.CV.VideoSurveillance.BackgroundSubstractorMOG2">
             <summary>
             The class implements the following algorithm:
             "Improved adaptive Gausian mixture model for background subtraction"
@@ -21676,15 +20860,15 @@
             http://www.zoranz.net/Publications/zivkovic2004ICPR.pdf
             </summary>
         </member>
-        <member name="M:Emgu.CV.VideoSurveillance.BackgroundSubtractorMOG2.#ctor(System.Int32,System.Single,System.Boolean)">
+        <member name="M:Emgu.CV.VideoSurveillance.BackgroundSubstractorMOG2.#ctor(System.Int32,System.Single,System.Boolean)">
             <summary>
             Create an "Improved adaptive Gausian mixture model for background subtraction".
             </summary>
             <param name="history">The length of the history. Use 0 for default</param>
             <param name="varThreshold">The maximum allowed number of mixture comonents.  Actual number is determined dynamically per pixel.</param>
-            <param name="shadowDetection">If true, perform shadow detection.</param>
+            <param name="bShadowDetection">If true, perform shadow detection.</param>
         </member>
-        <member name="M:Emgu.CV.VideoSurveillance.BackgroundSubtractorMOG2.DisposeObject">
+        <member name="M:Emgu.CV.VideoSurveillance.BackgroundSubstractorMOG2.DisposeObject">
             <summary>
             Release all the unmanaged memory associated with this background model.
             </summary>
@@ -21744,7 +20928,7 @@
             Release the managed resource
             </summary>
         </member>
-        <member name="P:Emgu.CV.VideoSurveillance.BGCodeBookModel`1.ForegroundMask">
+        <member name="P:Emgu.CV.VideoSurveillance.BGCodeBookModel`1.ForgroundMask">
             <summary>
             Get the foreground mask. Do not dispose this image.
             </summary>
@@ -21809,7 +20993,7 @@
             Get a copy of the current background
             </summary>
         </member>
-        <member name="P:Emgu.CV.VideoSurveillance.BGStatModel`1.ForegroundMask">
+        <member name="P:Emgu.CV.VideoSurveillance.BGStatModel`1.ForgroundMask">
             <summary>
             Get a copy of the mask for the current foreground
             </summary>
@@ -21853,7 +21037,7 @@
             <summary>
             Get the blob with the specific id
             </summary>
-            <param name="blobId">The id of the blob</param>
+            <param name="blobID">The id of the blob</param>
             <returns>The blob of the specific id, if do not exist, MCvBlob.Empty is returned</returns>
         </member>
         <member name="M:Emgu.CV.VideoSurveillance.BlobSeqBase.GetEnumerator">
@@ -21871,7 +21055,7 @@
             <summary>
             Return the blob given the specific index
             </summary>
-            <param name="index">The index of the blob</param>
+            <param name="i">The index of the blob</param>
             <returns>The blob in the specific index</returns>
         </member>
         <member name="M:Emgu.CV.VideoSurveillance.BlobSeq.#ctor(System.IntPtr)">
@@ -22012,7 +21196,7 @@
             Release the blob tracker auto
             </summary>
         </member>
-        <member name="P:Emgu.CV.VideoSurveillance.BlobTrackerAuto`1.ForegroundMask">
+        <member name="P:Emgu.CV.VideoSurveillance.BlobTrackerAuto`1.ForgroundMask">
             <summary>
             Get the foreground mask
             </summary>
@@ -22167,7 +21351,7 @@
             Release the foreground detector
             </summary>
         </member>
-        <member name="P:Emgu.CV.VideoSurveillance.FGDetector`1.ForegroundMask">
+        <member name="P:Emgu.CV.VideoSurveillance.FGDetector`1.ForgroundMask">
             <summary>
             Get the foreground mask from the detector
             </summary>

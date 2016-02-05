@@ -25,7 +25,7 @@ namespace Team_Victoria_Controller
         public enum Connection { Unknown, Disconnected, Connected};
 
         public Connection statusEve;
-        public Connection statusLuis;
+        public Connection statusMarty;
         public Connection statusCam;
 
         private Capture _cap = null;
@@ -51,7 +51,7 @@ namespace Team_Victoria_Controller
         Queue<string> commands2 = new Queue<string>();
 
         SerialPort EvePort; // = new SerialPort("COM3");
-        SerialPort LuisPort;
+        SerialPort MartyPort;
 
         //some program points
         VPoint eveCapturePoint;
@@ -65,7 +65,7 @@ namespace Team_Victoria_Controller
             InitializeComponent();
 
             statusEve = Connection.Unknown;
-            statusLuis = Connection.Unknown;
+            statusMarty = Connection.Unknown;
             statusCam = Connection.Unknown;
 
             if(MessageBox.Show("Attempt communication with " + EveDef.name + "?", "Establishing Connection...", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.No)
@@ -73,12 +73,12 @@ namespace Team_Victoria_Controller
                 statusEve = Connection.Disconnected;
             }
 
-            if (MessageBox.Show("Attempt communication with " + LuisDef.name + "?", "Establishing Connection...", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.No)
+            if (MessageBox.Show("Attempt communication with " + MartyDef.name + "?", "Establishing Connection...", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.No)
             {
-                statusLuis = Connection.Disconnected;
+                statusMarty = Connection.Disconnected;
             }
 
-            while(statusEve == Connection.Unknown || statusLuis == Connection.Unknown)
+            while(statusEve == Connection.Unknown || statusMarty == Connection.Unknown)
             {
                 string[] ports = SerialPort.GetPortNames();
 
@@ -88,27 +88,27 @@ namespace Team_Victoria_Controller
                         if (statusEve == Connection.Unknown)
                             StartEveComm(ports[0]);
                         else
-                            StartLuisComm(ports[0]);
+                            StartMartyComm(ports[0]);
                         break;
                     case 2:
                         ProbePort(ports[0]);
                         if (MessageBox.Show("Did " + EveDef.name + "'s lights turn on?", "", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                         {
                             StartEveComm(ports[0]);
-                            StartLuisComm(ports[1]);
+                            StartMartyComm(ports[1]);
                             EvePort.WriteLine("L0");
                         }
                         else
                         {
                             StartEveComm(ports[1]);
-                            StartLuisComm(ports[2]);
+                            StartMartyComm(ports[2]);
                         }
                         break;
                     default:
                         if (MessageBox.Show("No connections found. Refresh?", "", MessageBoxButton.YesNo) == MessageBoxResult.No)
                         {
                             statusEve = Connection.Disconnected;
-                            statusLuis = Connection.Disconnected;
+                            statusMarty = Connection.Disconnected;
                         }
                         break;
                 }
@@ -201,9 +201,9 @@ namespace Team_Victoria_Controller
                     " ,   C: " + Math.Round(Geometry.RtD(point.Eve.C), 2) +
                     " ,   D: " + Math.Round(Geometry.RtD(point.Eve.D), 2) + Environment.NewLine + "LUIS: " +
 
-                    "     A: " + Math.Round(Geometry.RtD(point.Luis.A), 2) +
-                    " ,   B: " + Math.Round(Geometry.RtD(point.Luis.B), 2) +
-                    " ,   C: " + Math.Round(Geometry.RtD(point.Luis.C), 2);
+                    "     A: " + Math.Round(Geometry.RtD(point.Marty.A), 2) +
+                    " ,   B: " + Math.Round(Geometry.RtD(point.Marty.B), 2) +
+                    " ,   C: " + Math.Round(Geometry.RtD(point.Marty.C), 2);
 
                 vpointBlock.Foreground = MediaBrushes.White;
                 vpointBlock.Background = new SolidColorBrush(MediaColor.FromRgb((byte)point.ID.Red, (byte)point.ID.Green, (byte)point.ID.Blue));
@@ -417,13 +417,13 @@ namespace Team_Victoria_Controller
                         //Also, use either QueuePointLuis for defined points, or commands2 for induvidual commands
 
 
-                        QueuePointLuis(shape);
+                        QueuePointMarty(shape);
 
                         commands2.Enqueue("M1"); //Electromagnet on
 
                         commands2.Enqueue(""); //Lift
 
-                        QueuePointLuis(squarePoint); //Go to square destination
+                        QueuePointMarty(squarePoint); //Go to square destination
 
                         commands2.Enqueue("M0"); //Electromagnet off
 
@@ -459,7 +459,7 @@ namespace Team_Victoria_Controller
 
 
 
-            //==============LUIS' COMMANDS====================
+            //==============MARTY's COMMANDS====================
 
 
             SetStatus(commands2.Peek());
@@ -475,7 +475,7 @@ namespace Team_Victoria_Controller
 
                 default:
                     String command = commands2.Dequeue();
-                    LuisPort.WriteLine(command);
+                    MartyPort.WriteLine(command);
 
                     break;
             }
@@ -565,16 +565,16 @@ namespace Team_Victoria_Controller
 
             commands1.Enqueue("A" + Math.Round(Geometry.RtD(point.Eve.A), 2).ToString()); 
         }
-        private void QueuePointLuis(VPoint point)
+        private void QueuePointMarty(VPoint point)
         {
             //NEEDS CONTENT
 
             //Make sure to know if you are using radians or degrees
             //suggestion:
 
-            commands2.Enqueue("A" + Math.Round(point.Luis.A, 2).ToString());
-            commands2.Enqueue("B" + Math.Round(point.Luis.B, 2).ToString());
-            commands2.Enqueue("C" + Math.Round(point.Luis.C, 2).ToString());
+            commands2.Enqueue("A" + Math.Round(point.Marty.A, 2).ToString());
+            commands2.Enqueue("B" + Math.Round(point.Marty.B, 2).ToString());
+            commands2.Enqueue("C" + Math.Round(point.Marty.C, 2).ToString());
         }
 
 
@@ -593,12 +593,12 @@ namespace Team_Victoria_Controller
             EvePort.DataReceived += new SerialDataReceivedEventHandler(DataReceived);
             EvePort.Open();
         }
-        private void StartLuisComm(String port)
+        private void StartMartyComm(String port)
         {
-            statusLuis = Connection.Connected;
-            LuisPort = new SerialPort(port);
-            LuisPort.DataReceived += new SerialDataReceivedEventHandler(DataReceived);
-            LuisPort.Open();
+            statusMarty = Connection.Connected;
+            MartyPort = new SerialPort(port);
+            MartyPort.DataReceived += new SerialDataReceivedEventHandler(DataReceived);
+            MartyPort.Open();
         }
 
         private static void DataReceived(object sender, SerialDataReceivedEventArgs e)
