@@ -57,7 +57,7 @@ namespace Team_Victoria_Controller
             z = 0;
 
             TransformXYZtoEVE();
-            TransformXYZtoLUIS();
+            TransformXYZtoMARTY();
 
             Eve.D = Math.PI / 2; //NEEDS MORE
             Marty.D = 0;
@@ -69,7 +69,7 @@ namespace Team_Victoria_Controller
             z = _z;
 
             TransformXYZtoEVE();
-            TransformXYZtoLUIS();
+            TransformXYZtoMARTY();
 
             Eve.D = Math.PI / 2;
             Marty.D = 0; 
@@ -81,7 +81,7 @@ namespace Team_Victoria_Controller
             z = 0;
 
             TransformXYZtoEVE();
-            TransformXYZtoLUIS();
+            TransformXYZtoMARTY();
 
             Eve.D = Math.PI / 2;
             Marty.D = 0;
@@ -113,7 +113,7 @@ namespace Team_Victoria_Controller
 
             Eve.C = Geometry.LawOfCosines(d, EveDef.ElbowToWrist_L, EveDef.RootToElbow_L) + Eve.B;
         }
-        private void TransformXYZtoLUIS()
+        private void TransformXYZtoMARTY()
         {
 
             int Lx = -x;
@@ -127,7 +127,7 @@ namespace Team_Victoria_Controller
             double linka = MartyDef.RootToElbow_L;
             double linkb = MartyDef.ElbowToWrist_L;
 
-            double r = (Math.Sqrt(Math.Pow(Lx, 2) + Math.Pow(Ly, 2)) - MartyDef.WristToEnd_L;
+            double r = (Math.Sqrt(Math.Pow(Lx, 2) + Math.Pow(Ly, 2)) - MartyDef.WristToEnd_L);
             double dh = MartyDef.FloorToRoot_Z - MartyDef.WristToEnd_Z;
             double d = Math.Sqrt((r * r) + (dh * dh));
             double theta2 = Math.Acos((linka * linka + linkb * linkb - d * d) / (2 * linka * linkb)) * (180 / Math.PI);

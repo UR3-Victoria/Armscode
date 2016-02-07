@@ -12,7 +12,7 @@ using System.IO.Ports;
 using MediaColor = System.Windows.Media.Color;
 using MediaBrushes = System.Windows.Media.Brushes;
 
-//QueuePointLuis
+//QueuePointMarty
 //RobotDef.cs
 //VPoint.cs
 
@@ -199,7 +199,7 @@ namespace Team_Victoria_Controller
                     "     A: " + Math.Round(Geometry.RtD(point.Eve.A), 2) +
                     " ,   B: " + Math.Round(Geometry.RtD(point.Eve.B), 2) + 
                     " ,   C: " + Math.Round(Geometry.RtD(point.Eve.C), 2) +
-                    " ,   D: " + Math.Round(Geometry.RtD(point.Eve.D), 2) + Environment.NewLine + "LUIS: " +
+                    " ,   D: " + Math.Round(Geometry.RtD(point.Eve.D), 2) + Environment.NewLine + "MARTY: " +
 
                     "     A: " + Math.Round(Geometry.RtD(point.Marty.A), 2) +
                     " ,   B: " + Math.Round(Geometry.RtD(point.Marty.B), 2) +
@@ -408,29 +408,19 @@ namespace Team_Victoria_Controller
                         points.Remove(shape2); //remove the shape from the list & update display
                         DisplayPoints();
 
-                        //Here is where you would put the rest of the path code.
-                        //Queue up all the commands needed to get to the shape,
-                        //pick it up, and drop it at the destination.
+                        QueuePointMarty(shape); //Go to ahape
 
-                        //Queue the destination point like: QueuePointLuis(squarePoint);
+                        commands2.Enqueue("M\n1"); //Electromagnet on
 
-                        //Also, use either QueuePointLuis for defined points, or commands2 for induvidual commands
-
-
-                        QueuePointMarty(shape);
-
-                        commands2.Enqueue("M1"); //Electromagnet on
-
-                        commands2.Enqueue(""); //Lift
+                        commands2.Enqueue("A\n100"); //Lift
+                        commands2.Enqueue("B\n60");
 
                         QueuePointMarty(squarePoint); //Go to square destination
 
-                        commands2.Enqueue("M0"); //Electromagnet off
+                        commands2.Enqueue("M\n0"); //Electromagnet off
 
-                        commands2.Enqueue(""); //Pounce position
-
-
-
+                        commands2.Enqueue("A\n142"); //Pounce position
+                        commands2.Enqueue("B\n4");
 
                         
                         //this forces the program to prepare another shape for either robot
