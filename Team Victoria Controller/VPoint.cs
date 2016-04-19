@@ -42,7 +42,7 @@ namespace Team_Victoria_Controller
 
             double xToCam = ((double)camXY.X / 480 - 0.5) * (EveDef.CameraWidthOverZ * 1.00000 * (camera.z + EveDef.WristToEnd_Z - EveDef.WristToCam_Z));
             double yToCam = ((double)camXY.Y / 640 - 0.5) * (EveDef.CameraWidthOverZ * 1.33333 * (camera.z + EveDef.WristToEnd_Z - EveDef.WristToCam_Z));
-
+            
             double rToCam = Geometry.XYtoR(xToCam, yToCam);
             double thetaToCam = Geometry.XYtoTheta(xToCam, yToCam);
 

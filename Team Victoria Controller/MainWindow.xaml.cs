@@ -4,10 +4,12 @@ using System;
 using System.Drawing;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Threading;
 using System.Collections.Generic;
 using System.Windows.Media;
 using System.IO.Ports;
+using System.Threading;
 
 using MediaColor = System.Windows.Media.Color;
 using MediaBrushes = System.Windows.Media.Brushes;
@@ -37,9 +39,15 @@ namespace Team_Victoria_Controller
         public int _waiting;
         public Boolean _moving; //not really true, only TRUE for waiting for move
 
+        public Boolean _autoCommand;
+        public Boolean _doCommand;
+
         public static Boolean A_stable;
         public static Boolean B_stable;
         public static Boolean C_stable;
+
+
+        public static Boolean _eveID;
 
 
         ShapeDetection shapeDetector;
@@ -50,7 +58,7 @@ namespace Team_Victoria_Controller
         Queue<string> commands1 = new Queue<string>();
         Queue<string> commands2 = new Queue<string>();
 
-        SerialPort EvePort; // = new SerialPort("COM3");
+        SerialPort EvePort;
         SerialPort MartyPort;
 
         //some program points
@@ -58,6 +66,8 @@ namespace Team_Victoria_Controller
         VPoint eveHomePoint;
         VPoint squarePoint;
         VPoint trianglePoint;
+        VPoint testPoint;
+        VPoint testPoint2;
 
 
         public MainWindow()
@@ -68,6 +78,16 @@ namespace Team_Victoria_Controller
             statusMarty = Connection.Unknown;
             statusCam = Connection.Unknown;
 
+            _autoCommand = true;
+
+
+            EvePort = new SerialPort();
+            MartyPort = new SerialPort();
+
+            EvePort.DataReceived += new SerialDataReceivedEventHandler(DataReceived);
+            // MartyPort.DataReceived += new SerialDataReceivedEventHandler(DataReceived);
+
+            /*
             if(MessageBox.Show("Attempt communication with " + EveDef.name + "?", "Establishing Connection...", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.No)
             {
                 statusEve = Connection.Disconnected;
@@ -77,43 +97,58 @@ namespace Team_Victoria_Controller
             {
                 statusMarty = Connection.Disconnected;
             }
+             */
 
+            /*
             while(statusEve == Connection.Unknown || statusMarty == Connection.Unknown)
             {
                 string[] ports = SerialPort.GetPortNames();
 
+                cmbSelect1.ItemsSource = ports;
+
                 switch (ports.Length)
                 {
                     case 1:
-                        if (statusEve == Connection.Unknown)
-                            StartEveComm(ports[0]);
-                        else
+                        StartEveComm(ports[0]);
+                        statusMarty = Connection.Disconnected;
+                        if (!ProbeEve())
+                        {
                             StartMartyComm(ports[0]);
+                            statusEve = Connection.Disconnected;
+                        }
                         break;
                     case 2:
-                        ProbePort(ports[0]);
-                        if (MessageBox.Show("Did " + EveDef.name + "'s lights turn on?", "", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                        StartEveComm(ports[0]);
+                        if (ProbeEve())
                         {
-                            StartEveComm(ports[0]);
                             StartMartyComm(ports[1]);
-                            EvePort.WriteLine("L0");
                         }
                         else
                         {
                             StartEveComm(ports[1]);
-                            StartMartyComm(ports[2]);
+                            StartMartyComm(ports[0]);
                         }
                         break;
                     default:
-                        if (MessageBox.Show("No connections found. Refresh?", "", MessageBoxButton.YesNo) == MessageBoxResult.No)
+                        if (MessageBox.Show("No robots found. Refresh?", "", MessageBoxButton.YesNo) == MessageBoxResult.No)
                         {
                             statusEve = Connection.Disconnected;
                             statusMarty = Connection.Disconnected;
+                        }
+                        else
+                        {
+                            statusEve = Connection.Unknown;
+                            statusMarty = Connection.Unknown;
                         }
                         break;
                 }
 
             }
+            */
+            cmbSelect1.ItemsSource = SerialPort.GetPortNames();
+            cmbSelect2.ItemsSource = SerialPort.GetPortNames();
+            lblStatus1.Content = statusEve.ToString();
+            lblStatus2.Content = statusMarty.ToString();
 
             while(statusCam == Connection.Unknown)
             {
@@ -147,18 +182,30 @@ namespace Team_Victoria_Controller
             eveHomePoint.ID = new Bgr(198, 64, 64);
             eveHomePoint.tag = "Home Position";
 
-            squarePoint = new VPoint((int)Geometry.PolarToX(Geometry.DtoR(150), 350), (int)Geometry.PolarToY(Geometry.DtoR(150), 350), 30);
+            //squarePoint = new VPoint((int)Geometry.PolarToX(Geometry.DtoR(150), 350), (int)Geometry.PolarToY(Geometry.DtoR(150), 350), 30);
+            squarePoint = new VPoint(-150, 350);
             squarePoint.ID = new Bgr(64, 64, 198);
             squarePoint.tag = "Destination for sorted squares";
 
-            trianglePoint = new VPoint((int)Geometry.PolarToX(Geometry.DtoR(30), 350), (int)Geometry.PolarToY(Geometry.DtoR(30), 350), 30);
+            //trianglePoint = new VPoint((int)Geometry.PolarToX(Geometry.DtoR(30), 350), (int)Geometry.PolarToY(Geometry.DtoR(30), 350), 30);
+            trianglePoint = new VPoint(-150, 250);
             trianglePoint.ID = new Bgr(64, 198, 64);
             trianglePoint.tag = "Destination for sorted triangles";
+
+            testPoint = new VPoint(0, 400, 0);
+            testPoint.ID = new Bgr(200, 100, 200);
+            testPoint.tag = "Triangle";
+
+            testPoint2 = new VPoint(0, 400, 0);
+            testPoint2.ID = new Bgr(100, 200, 200);
+            testPoint2.tag = "Square";
 
             points.Add(eveCapturePoint);
             points.Add(eveHomePoint);
             points.Add(squarePoint);
             points.Add(trianglePoint);
+            points.Add(testPoint);
+            points.Add(testPoint2);
 
             DisplayPoints();
 
@@ -201,9 +248,9 @@ namespace Team_Victoria_Controller
                     " ,   C: " + Math.Round(Geometry.RtD(point.Eve.C), 2) +
                     " ,   D: " + Math.Round(Geometry.RtD(point.Eve.D), 2) + Environment.NewLine + "MARTY: " +
 
-                    "     A: " + Math.Round(Geometry.RtD(point.Marty.A), 2) +
-                    " ,   B: " + Math.Round(Geometry.RtD(point.Marty.B), 2) +
-                    " ,   C: " + Math.Round(Geometry.RtD(point.Marty.C), 2);
+                    "     A: " + Math.Round(point.Marty.A) +
+                    " ,   B: " + Math.Round(point.Marty.B) +
+                    " ,   C: " + Math.Round(point.Marty.C);
 
                 vpointBlock.Foreground = MediaBrushes.White;
                 vpointBlock.Background = new SolidColorBrush(MediaColor.FromRgb((byte)point.ID.Red, (byte)point.ID.Green, (byte)point.ID.Blue));
@@ -299,151 +346,69 @@ namespace Team_Victoria_Controller
                 return;
             }
 
+            if(Keyboard.IsKeyDown(Key.N))
+            {
+                _doCommand = true;
+            }
+
+            if (_autoCommand == false && _doCommand == false)
+            {
+                SetStatus("Waiting for 'Do Next Command'");
+                return;
+            }
+
+            if (_autoCommand == false && _doCommand == true)
+            {
+                _doCommand = false;
+            }
+
             //quit if empty
             if (commands1.Count == 0 && commands2.Count == 0)
-                return;
+                SortAShape();
 
 
             //==============EVE'S COMMANDS====================
 
-
-            SetStatus(commands1.Peek());
-
-            switch (commands1.Peek())
+            if (commands1.Count != 0 && statusEve == Connection.Connected)
             {
-                case VCommand.WaitForStop:
+                SetStatus(commands1.Peek());
 
-                    commands1.Dequeue();
-                    _waiting = (1000 / progTimer.Interval.Milliseconds) * Int32.Parse(commands1.Dequeue());
-                    _moving = true;
-                    break;
+                switch (commands1.Peek())
+                {
+                    case VCommand.WaitForStop:
 
-                case VCommand.Wait:
+                        commands1.Dequeue();
+                        _waiting = (1000 / progTimer.Interval.Milliseconds) * Int32.Parse(commands1.Dequeue());
+                        _moving = true;
+                        break;
 
-                    commands1.Dequeue();
-                    _waiting = (1000 / progTimer.Interval.Milliseconds) * Int32.Parse(commands1.Dequeue());
-                    break;
+                    case VCommand.Wait:
 
-                case VCommand.DoAScan:
-                    commands1.Dequeue();
-                    capTimer.Start();
-                    ScanStart();
-                    break;
+                        commands1.Dequeue();
+                        _waiting = (1000 / progTimer.Interval.Milliseconds) * Int32.Parse(commands1.Dequeue());
+                        break;
 
-                case VCommand.SortAShape:
-                    commands1.Dequeue();
+                    case VCommand.DoAScan:
+                        commands1.Dequeue();
+                        capTimer.Start();
+                        ScanStart();
+                        break;
 
-
-                    VPoint shape2 = points.Find(x => x.tag == "Square");
-
-                    if (shape2 == null)
-                    {
-                        shape2 = points.Find(x => x.tag == "Triangle");
-
-                        if (shape2 == null)
-                        {
-                            ProgramStart();
-                            DisplayCommands();
-                            return;
-                        }
-                    }
-
-
-
-                    if (shape2.tag == "Triangle")
-                    {
-                        VPoint shape = new VPoint(shape2.x, shape2.y, -5);
-                        shape.tag = shape2.tag;
-
-                        VPoint above_shape = new VPoint(shape2.x, shape2.y, 30);
-
-                        points.Remove(shape2);
-
-
-                        QueuePointEve(above_shape, false);
-                        commands1.Enqueue(VCommand.WaitForStop);
-                        commands1.Enqueue("10");
-
-
-                        commands1.Enqueue("P1");
-
-
-                        QueuePointEve(shape, true);
-                        commands1.Enqueue(VCommand.WaitForStop);
-                        commands1.Enqueue("10");
-
-                        QueuePointEve(eveHomePoint, false);
-                        commands1.Enqueue(VCommand.WaitForStop);
-                        commands1.Enqueue("10");
-
-                        if (shape.tag == "Square")
-                            QueuePointEve(squarePoint, true);
-                        if (shape.tag == "Triangle")
-                            QueuePointEve(trianglePoint, true);
-                        commands1.Enqueue(VCommand.WaitForStop);
-                        commands1.Enqueue("10");
-
-                        commands1.Enqueue("P0");
-
-                        commands1.Enqueue(VCommand.Wait);
-                        commands1.Enqueue("1");
-
-                        QueuePointEve(eveHomePoint, false);
-                        commands1.Enqueue(VCommand.WaitForStop);
-                        commands1.Enqueue("10");
-
-                        points.Remove(shape);
-                        DisplayPoints();
-
-                        commands1.Enqueue(VCommand.SortAShape);
-                    }
-
-                    if(shape2.tag == "Square")
-                    {
-                        //These four lines create a shape to process.
-                        //If you need to shift the position (xy) of the percieved shape, do it here
-                        VPoint shape = new VPoint(shape2.x, shape2.y); //ex. new VPoint(shape2.x - 30, shape2.y, 10)
-                        shape.tag = shape2.tag;
-
-                        points.Remove(shape2); //remove the shape from the list & update display
-                        DisplayPoints();
-
-                        QueuePointMarty(shape); //Go to ahape
-
-                        commands2.Enqueue("M\n1"); //Electromagnet on
-
-                        commands2.Enqueue("A\n100"); //Lift
-                        commands2.Enqueue("B\n60");
-
-                        QueuePointMarty(squarePoint); //Go to square destination
-
-                        commands2.Enqueue("M\n0"); //Electromagnet off
-
-                        commands2.Enqueue("A\n142"); //Pounce position
-                        commands2.Enqueue("B\n4");
-
-                        
-                        //this forces the program to prepare another shape for either robot
-                        //(commands1 manditory)
-                        //not perfect solution, patch later
-                        commands1.Enqueue(VCommand.SortAShape);  
-                    }
-
-                    break;
-
-                default:
-                    String command = commands1.Dequeue();
+                    default:
+                        String command = commands1.Dequeue();
                     
-                    if(command[0] == 'A' || command[0] == 'B' || command[0] == 'C')
-                    {
-                        A_stable = false;
-                        B_stable = false;
-                        C_stable = false;
-                    }
+                        if(command[0] == 'A' || command[0] == 'B' || command[0] == 'C')
+                        {
+                            A_stable = false;
+                            B_stable = false;
+                            C_stable = false;
+                        }
                         
-                    EvePort.WriteLine(command);
+                        EvePort.WriteLine(command);
 
-                    break;
+                        break;
+                }
+
             }
 
 
@@ -452,25 +417,131 @@ namespace Team_Victoria_Controller
             //==============MARTY's COMMANDS====================
 
 
-            SetStatus(commands2.Peek());
-
-            switch (commands2.Peek())
+            if (commands2.Count != 0 && statusMarty == Connection.Connected)
             {
+                SetStatus(commands2.Peek());
 
-                case VCommand.Wait:
+                switch (commands2.Peek())
+                {
 
-                    commands2.Dequeue();
-                    _waiting = (1000 / progTimer.Interval.Milliseconds) * Int32.Parse(commands2.Dequeue());
-                    break;
+                    case VCommand.Wait:
 
-                default:
-                    String command = commands2.Dequeue();
-                    MartyPort.WriteLine(command);
+                        commands2.Dequeue();
+                        _waiting = (1000 / progTimer.Interval.Milliseconds) * Int32.Parse(commands2.Dequeue());
+                        break;
 
-                    break;
+                    default:
+                        String command = commands2.Dequeue();
+                        MartyPort.WriteLine(command);
+
+                        break;
+                }
+            }
+            
+
+
+        }
+
+        private void SortAShape()
+        {
+
+            VPoint shape = points.Find(x => x.tag == "Square");
+
+            if (shape == null)
+            {
+                shape = points.Find(x => x.tag == "Triangle");
+
+                if (shape == null)
+                {
+                    ProgramStart();
+                    DisplayCommands();
+                    return;
+                }
             }
 
 
+
+            if (shape.tag == "Triangle")
+            {
+                VPoint on_shape = new VPoint(shape.x, shape.y, -5);
+                on_shape.tag = shape.tag;
+
+                VPoint above_shape = new VPoint(shape.x, shape.y, 30);
+
+
+                QueuePointEve(above_shape, false);
+                commands1.Enqueue(VCommand.WaitForStop);
+                commands1.Enqueue("10");
+
+
+                commands1.Enqueue("P1");
+
+
+                QueuePointEve(on_shape, true);
+                commands1.Enqueue(VCommand.WaitForStop);
+                commands1.Enqueue("10");
+
+                QueuePointEve(eveHomePoint, false);
+                commands1.Enqueue(VCommand.WaitForStop);
+                commands1.Enqueue("10");
+
+                if (shape.tag == "Square")
+                    QueuePointEve(squarePoint, true);
+                if (shape.tag == "Triangle")
+                    QueuePointEve(trianglePoint, true);
+                commands1.Enqueue(VCommand.WaitForStop);
+                commands1.Enqueue("10");
+
+                commands1.Enqueue("P0");
+
+                commands1.Enqueue(VCommand.Wait);
+                commands1.Enqueue("1");
+
+                QueuePointEve(eveHomePoint, false);
+                commands1.Enqueue(VCommand.WaitForStop);
+                commands1.Enqueue("10");
+
+                points.Remove(shape);
+                DisplayPoints();
+
+            }
+
+            if (shape.tag == "Square")
+            {
+                //These four lines create a shape to process.
+                //If you need to shift the position (xy) of the percieved shape, do it here
+                VPoint on_shape = new VPoint(shape.x, shape.y); //ex. new VPoint(shape2.x - 30, shape2.y, 10)
+                on_shape.tag = shape.tag;
+
+                points.Remove(shape); //remove the shape from the list & update display
+                DisplayPoints();
+
+            
+
+                QueuePointMarty(on_shape); //Go to ahape
+
+                commands2.Enqueue(VCommand.Wait);
+                commands2.Enqueue("3");
+
+                commands2.Enqueue("M\n1"); //Electromagnet on
+
+                commands2.Enqueue("A\n100"); //Lift
+                commands2.Enqueue("B\n60");
+
+                commands2.Enqueue(VCommand.Wait);
+                commands2.Enqueue("3");
+
+                QueuePointMarty(squarePoint); //Go to square destination
+
+                commands2.Enqueue(VCommand.Wait);
+                commands2.Enqueue("3");
+
+                commands2.Enqueue("M\n0"); //Electromagnet off
+
+                commands2.Enqueue("A\n142"); //Pounce position
+                commands2.Enqueue("B\n4");
+
+            }
         }
 
         private void ScanStart()
@@ -531,10 +602,35 @@ namespace Team_Victoria_Controller
             commands1.Enqueue("2");
 
 
-            commands1.Enqueue(VCommand.SortAShape);
-
             EvePort.WriteLine("M1");
 
+            progTimer.Start();
+        }
+
+        private void ProgramStartDefault()
+        {
+
+            if (!points.Contains(eveCapturePoint))
+                points.Add(eveCapturePoint);
+            if (!points.Contains(eveHomePoint))
+                points.Add(eveHomePoint);
+            if (!points.Contains(squarePoint))
+                points.Add(squarePoint);
+            if (!points.Contains(trianglePoint))
+                points.Add(trianglePoint);
+
+            DisplayPoints();
+
+            try
+            {
+                EvePort.WriteLine("M1");
+            }
+            catch
+            {
+
+            }
+
+            progTimer.Start();
 
         }
 
@@ -562,32 +658,45 @@ namespace Team_Victoria_Controller
             //Make sure to know if you are using radians or degrees
             //suggestion:
 
-            commands2.Enqueue("A" + Math.Round(point.Marty.A, 2).ToString());
-            commands2.Enqueue("B" + Math.Round(point.Marty.B, 2).ToString());
-            commands2.Enqueue("C" + Math.Round(point.Marty.C, 2).ToString());
+            commands2.Enqueue("A\n" + Math.Round(point.Marty.A, 2).ToString());
+            commands2.Enqueue("B\n" + Math.Round(point.Marty.B, 2).ToString());
+            commands2.Enqueue("C\n" + Math.Round(point.Marty.C, 2).ToString());
         }
 
 
         //========================================= COMMUNICATION ===========================================
 
-        private void ProbePort(String port)
+        private bool ProbeEve()
         {
-            EvePort = new SerialPort(port);
-            EvePort.WriteLine("L1");
+            _eveID = false;
+
+            if(!EvePort.IsOpen)
+            {
+                EvePort.Open();
+            }
+            
+            
+            EvePort.WriteLine("I");
+
+            Thread.Sleep(1000);
+
+            return _eveID;
         }
 
         private void StartEveComm(String port)
         {
             statusEve = Connection.Connected;
-            EvePort = new SerialPort(port);
-            EvePort.DataReceived += new SerialDataReceivedEventHandler(DataReceived);
+            if (EvePort.IsOpen)
+                EvePort.Close();
+            EvePort.PortName = port;
             EvePort.Open();
         }
         private void StartMartyComm(String port)
         {
             statusMarty = Connection.Connected;
-            MartyPort = new SerialPort(port);
-            MartyPort.DataReceived += new SerialDataReceivedEventHandler(DataReceived);
+            if (MartyPort.IsOpen)
+                MartyPort.Close();
+            MartyPort.PortName = port;
             MartyPort.Open();
         }
 
@@ -599,14 +708,15 @@ namespace Team_Victoria_Controller
             indata = indata.ToString().TrimEnd(Environment.NewLine.ToCharArray());
 
             if (indata.Equals("Motor A Stable"))
-                A_stable = true;
+                A_stable = true;               
             if (indata.Equals("Motor B Stable"))
                 B_stable = true;
             if (indata.Equals("Motor C Stable"))
                 C_stable = true;
+            if (indata.Equals("VICTORIA"))
+                _eveID = true;
 
         }
-
 
         //========================================= MENU EVENTS ================================================
 
@@ -630,7 +740,6 @@ namespace Team_Victoria_Controller
         private void StartProgram(object sender, RoutedEventArgs e)
         {
             ProgramStart();
-            progTimer.Start();
         }
 
         private void Exit(object sender, RoutedEventArgs e)
@@ -677,6 +786,57 @@ namespace Team_Victoria_Controller
         private void GoToInput(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void RunNextCommand(object sender, RoutedEventArgs e)
+        {
+            _doCommand = true;
+        }
+
+        private void ManualCommands(object sender, RoutedEventArgs e)
+        {
+            _autoCommand = false;
+        }
+
+        private void AutoCommands(object sender, RoutedEventArgs e)
+        {
+            _autoCommand = true;
+        }
+
+        private void StartProgramDefault(object sender, RoutedEventArgs e)
+        {
+            ProgramStartDefault();
+        }
+
+        private void btnRefresh1_Click(object sender, RoutedEventArgs e)
+        {
+            string[] ports = SerialPort.GetPortNames();
+
+            cmbSelect1.ItemsSource = ports;
+            cmbSelect2.ItemsSource = ports;
+            lblStatus1.Content = statusEve.ToString();
+            lblStatus2.Content = statusMarty.ToString();
+
+            
+            if(cmbSelect1.SelectedItem != null)
+            {
+                StartEveComm(cmbSelect1.SelectedItem.ToString());
+            }
+            //StartEveComm(ports[0]);
+        }
+
+        private void btnRefresh2_Click(object sender, RoutedEventArgs e)
+        {
+            cmbSelect1.ItemsSource = SerialPort.GetPortNames();
+            cmbSelect2.ItemsSource = SerialPort.GetPortNames();
+            lblStatus1.Content = statusEve.ToString();
+            lblStatus2.Content = statusMarty.ToString();
+
+
+            if (cmbSelect2.SelectedItem != null)
+            {
+                StartMartyComm(cmbSelect2.SelectedItem.ToString());
+            }
         }
 
 

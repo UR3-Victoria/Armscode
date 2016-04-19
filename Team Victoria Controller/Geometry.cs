@@ -47,7 +47,7 @@ namespace Team_Victoria_Controller
             else if (x < 0)
                 return Math.PI + Math.Atan((double)y / (double)x);
             else
-                return 0;
+                return Math.PI / 2;
         }
         public static double XYtoR(double x, double y)
         {

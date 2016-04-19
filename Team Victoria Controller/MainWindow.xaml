@@ -17,17 +17,21 @@
                 <Separator/>
                 <MenuItem Header="Manual Scan" Click="ManualScan"/>
             </MenuItem>
-            <MenuItem Header="TRANSFORMS" Margin="4"/>
+            <MenuItem Header="TRANSFORMS" Margin="4" >
+                <MenuItem Header="Run program w/ default shapes" Click="StartProgramDefault"/>
+            </MenuItem>
             <MenuItem Header="COMMAND QUEUE" Margin="4">
-                <MenuItem Header="Clear Queue"/>
-                <MenuItem Header="Import Queue"/>
-                <MenuItem Header="Export Queue"/>
+                <MenuItem Header="Clear Queue (not connected)"/>
+                <MenuItem Header="Import Queue (not connected)"/>
+                <MenuItem Header="Export Queue (not connected)"/>
                 <Separator/>
-                <MenuItem Header="Add Command"/>
-                <MenuItem Header="Dequeue Next Command"/>
-                <MenuItem Header="Dequeue Last Command"/>
+                <MenuItem Header="Add Command (not connected)"/>
+                <MenuItem Header="Dequeue Next Command (not connected)"/>
+                <MenuItem Header="Dequeue Last Command (not connected)"/>
                 <Separator/>
-                <MenuItem Header="Run Next Command"/>
+                <MenuItem Header="Engage Manual Commands" Click="ManualCommands"/>
+                <MenuItem Header="Engage Auto Commands" Click="AutoCommands"/>
+                <MenuItem Header="Run Next Command" Click="RunNextCommand"/>
             </MenuItem>
             <MenuItem Header="MANUAL" Margin="4">
                 <MenuItem Header="Activate Motors" Click="MenuMotorsOn"/>
@@ -74,8 +78,13 @@
                 <ColumnDefinition Width="10"/>
                 <ColumnDefinition Width="2*" MinWidth="180"/>
             </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
 
-            <Grid>
+            <Grid Grid.Column="0" Grid.Row="1" Grid.RowSpan="2">
                 <Grid.Background>
                     <SolidColorBrush Color="#FF404040"/>
                 </Grid.Background>
@@ -91,16 +100,16 @@
                 </Viewbox>
             </Grid>
 
-            <GridSplitter Grid.Column="1" Width="10" HorizontalAlignment="Center" />
+            <GridSplitter Grid.Column="1" Width="10" HorizontalAlignment="Center" Grid.RowSpan="3"/>
 
-            <StackPanel x:Name="PointStack" Grid.Column="2">
+            <StackPanel x:Name="PointStack" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2">
 
             </StackPanel>
 
-            <GridSplitter Grid.Column="3" Width="10" HorizontalAlignment="Center"/>
+            <GridSplitter Grid.Column="3" Width="10" HorizontalAlignment="Center" Grid.RowSpan="3"/>
 
 
-            <TextBlock x:Name="CommandQueue1" Grid.Column="4">
+            <TextBlock x:Name="CommandQueue1" Grid.Column="4" Grid.Row="2">
                 <TextBlock.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FFC8C8C8" Offset="1"/>
@@ -109,9 +118,9 @@
                 </TextBlock.Background>
             </TextBlock>
 
-            <GridSplitter Grid.Column="5" Width="10" HorizontalAlignment="Center" />
+            <GridSplitter Grid.Column="5" Width="10" HorizontalAlignment="Center" Grid.RowSpan="3"/>
 
-            <TextBlock x:Name="CommandQueue2" Grid.Column="6">
+            <TextBlock x:Name="CommandQueue2" Grid.Column="6" Grid.Row="2">
                 <TextBlock.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FFC8C8C8" Offset="1"/>
@@ -119,6 +128,25 @@
                     </LinearGradientBrush>
                 </TextBlock.Background>
             </TextBlock>
+
+            <TextBlock Grid.Column="0" Grid.Row="0" Background="#FF0EBF57" Text="Camera" Foreground="White" FontSize="16" FontWeight="Bold" Padding="200,0" HorizontalAlignment="Center" />
+            <TextBlock Grid.Column="2" Grid.Row="0" Background="#FFE4E4E4" Text="Shape List" Foreground="#FF404040" FontSize="14" Padding="200,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Column="4" Grid.Row="0" Background="#FFD92E2E" Text="Victoria" Foreground="White" FontSize="16" FontWeight="Bold" Padding="200,0" HorizontalAlignment="Center"/>
+            <TextBlock Grid.Column="6" Grid.Row="0" Background="#FF5243E6" Text="Marty McFly" Foreground="White" FontSize="16" FontWeight="Bold" Padding="200,0" HorizontalAlignment="Center" />
+            
+
+            <StackPanel x:Name="Control1" Grid.Column="4" Grid.Row="1" Background="#FF404040" Orientation="Horizontal">
+                <Button x:Name="btnRefresh1" Width="60" Margin="5" Content="Refresh" Height="22.4" Click="btnRefresh1_Click" Background="#FF706F6F" Foreground="White" BorderBrush="#FF414141"/>
+                <ComboBox x:Name="cmbSelect1" Margin="0,10" VerticalAlignment="Center" Width="65" />
+                <Label x:Name="lblStatus1" Content="Unknown" Foreground="White" VerticalAlignment="Center" />
+            </StackPanel>
+
+            <StackPanel x:Name="Control2" Grid.Column="6" Grid.Row="1" Background="#FF404040" Orientation="Horizontal">
+                <Button x:Name="btnRefresh2" Width="60" Margin="5" Content="Refresh" Height="22.4" Background="#FF706F6F" Foreground="White" BorderBrush="#FF414141" Click="btnRefresh2_Click"/>
+                <ComboBox x:Name="cmbSelect2" Margin="0,10" VerticalAlignment="Center" Width="65" />
+                <Label x:Name="lblStatus2" Content="Unknown" Foreground="White" VerticalAlignment="Center" />
+            </StackPanel>
+
         </Grid>
     </DockPanel>
 
