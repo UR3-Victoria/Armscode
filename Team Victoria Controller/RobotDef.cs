@@ -25,7 +25,7 @@ namespace Team_Victoria_Controller
     {
         public const string name = "Marty McFly";
 
-        public const int FloorToRoot_Z = 88;
+        public const int FloorToRoot_Z = 87;
         public const int RootToElbow_L = 144;//linka
         public const int ElbowToWrist_L = 163; //linkb
         public const int WristToEnd_Z = 65;

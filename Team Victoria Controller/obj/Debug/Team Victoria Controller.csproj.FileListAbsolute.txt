@@ -78,3 +78,23 @@ C:\Users\cmorton\Documents\GitHub\Armscode\Team Victoria Controller\obj\Debug\Te
 C:\Users\cmorton\Documents\GitHub\Armscode\Team Victoria Controller\bin\Debug\Emgu.CV.dll
 C:\Users\cmorton\Documents\GitHub\Armscode\Team Victoria Controller\bin\Debug\Emgu.CV.UI.dll
 C:\Users\cmorton\Documents\GitHub\Armscode\Team Victoria Controller\bin\Debug\Emgu.Util.dll
+C:\Users\lrodrigue\Documents\Github\Armscode\Team Victoria Controller\bin\Debug\BA-EVE-03 Controller.exe.config
+C:\Users\lrodrigue\Documents\Github\Armscode\Team Victoria Controller\obj\Debug\BA-EVE-03 Controller.exe
+C:\Users\lrodrigue\Documents\Github\Armscode\Team Victoria Controller\obj\Debug\BA-EVE-03 Controller.pdb
+C:\Users\lrodrigue\Documents\Github\Armscode\Team Victoria Controller\bin\Debug\BA-EVE-03 Controller.exe
+C:\Users\lrodrigue\Documents\Github\Armscode\Team Victoria Controller\bin\Debug\BA-EVE-03 Controller.pdb
+C:\Users\lrodrigue\Documents\Github\Armscode\Team Victoria Controller\bin\Debug\Emgu.CV.dll
+C:\Users\lrodrigue\Documents\Github\Armscode\Team Victoria Controller\bin\Debug\Emgu.CV.UI.dll
+C:\Users\lrodrigue\Documents\Github\Armscode\Team Victoria Controller\bin\Debug\Emgu.Util.dll
+C:\Users\lrodrigue\Documents\Github\Armscode\Team Victoria Controller\bin\Debug\ZedGraph.dll
+C:\Users\lrodrigue\Documents\Github\Armscode\Team Victoria Controller\bin\Debug\Emgu.CV.xml
+C:\Users\lrodrigue\Documents\Github\Armscode\Team Victoria Controller\bin\Debug\Emgu.CV.UI.xml
+C:\Users\lrodrigue\Documents\Github\Armscode\Team Victoria Controller\bin\Debug\Emgu.Util.xml
+C:\Users\lrodrigue\Documents\Github\Armscode\Team Victoria Controller\obj\Debug\Team Victoria Controller.csprojResolveAssemblyReference.cache
+C:\Users\lrodrigue\Documents\Github\Armscode\Team Victoria Controller\obj\Debug\MainWindow.baml
+C:\Users\lrodrigue\Documents\Github\Armscode\Team Victoria Controller\obj\Debug\MainWindow.g.cs
+C:\Users\lrodrigue\Documents\Github\Armscode\Team Victoria Controller\obj\Debug\App.g.cs
+C:\Users\lrodrigue\Documents\Github\Armscode\Team Victoria Controller\obj\Debug\BA-EVE-03 Controller_MarkupCompile.cache
+C:\Users\lrodrigue\Documents\Github\Armscode\Team Victoria Controller\obj\Debug\BA-EVE-03 Controller.g.resources
+C:\Users\lrodrigue\Documents\Github\Armscode\Team Victoria Controller\obj\Debug\BA_EVE_03_Controller.Properties.Resources.resources
+C:\Users\lrodrigue\Documents\Github\Armscode\Team Victoria Controller\obj\Debug\Team Victoria Controller.csproj.GenerateResource.Cache

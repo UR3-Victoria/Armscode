@@ -85,7 +85,9 @@ namespace Team_Victoria_Controller
             MartyPort = new SerialPort();
 
             EvePort.DataReceived += new SerialDataReceivedEventHandler(DataReceived);
-            // MartyPort.DataReceived += new SerialDataReceivedEventHandler(DataReceived);
+            MartyPort.DataReceived += new SerialDataReceivedEventHandler(DataReceived);
+
+            MartyPort.BaudRate = 115200;
 
             /*
             if(MessageBox.Show("Attempt communication with " + EveDef.name + "?", "Establishing Connection...", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.No)
@@ -432,7 +434,7 @@ namespace Team_Victoria_Controller
 
                     default:
                         String command = commands2.Dequeue();
-                        MartyPort.WriteLine(command);
+                        MartyPort.Write(command);
 
                         break;
                 }
@@ -520,26 +522,37 @@ namespace Team_Victoria_Controller
 
                 QueuePointMarty(on_shape); //Go to ahape
 
-                commands2.Enqueue(VCommand.Wait);
-                commands2.Enqueue("3");
-
-                commands2.Enqueue("M\n1"); //Electromagnet on
-
-                commands2.Enqueue("A\n100"); //Lift
-                commands2.Enqueue("B\n60");
+                commands2.Enqueue("M:1"); //Electromagnet on
 
                 commands2.Enqueue(VCommand.Wait);
-                commands2.Enqueue("3");
+                commands2.Enqueue("2");
+
+                commands2.Enqueue("A:100"); //Lift
+
+                commands2.Enqueue(VCommand.Wait);
+                commands2.Enqueue("2");
+
+                commands2.Enqueue("B:60");
+
+                commands2.Enqueue(VCommand.Wait);
+                commands2.Enqueue("2");
 
                 QueuePointMarty(squarePoint); //Go to square destination
 
+                commands2.Enqueue("M:0"); //Electromagnet off
+
                 commands2.Enqueue(VCommand.Wait);
-                commands2.Enqueue("3");
+                commands2.Enqueue("2");
 
-                commands2.Enqueue("M\n0"); //Electromagnet off
+                commands2.Enqueue("A:142"); //Pounce position
 
-                commands2.Enqueue("A\n142"); //Pounce position
-                commands2.Enqueue("B\n4");
+                commands2.Enqueue(VCommand.Wait);
+                commands2.Enqueue("2");
+
+                commands2.Enqueue("B:4");
+
+                commands2.Enqueue(VCommand.Wait);
+                commands2.Enqueue("2");
 
             }
         }
@@ -658,9 +671,16 @@ namespace Team_Victoria_Controller
             //Make sure to know if you are using radians or degrees
             //suggestion:
 
-            commands2.Enqueue("A\n" + Math.Round(point.Marty.A, 2).ToString());
-            commands2.Enqueue("B\n" + Math.Round(point.Marty.B, 2).ToString());
-            commands2.Enqueue("C\n" + Math.Round(point.Marty.C, 2).ToString());
+            commands2.Enqueue("C:" + Math.Round(point.Marty.C, 0).ToString());
+            commands2.Enqueue(VCommand.Wait);
+            commands2.Enqueue("2");
+            commands2.Enqueue("B:" + Math.Round(point.Marty.B, 0).ToString());
+            commands2.Enqueue(VCommand.Wait);
+            commands2.Enqueue("2");
+            commands2.Enqueue("A:" + Math.Round(point.Marty.A, 0).ToString());
+            commands2.Enqueue(VCommand.Wait);
+            commands2.Enqueue("2");
+            
         }
 
 

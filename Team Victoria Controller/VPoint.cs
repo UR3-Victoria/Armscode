@@ -120,8 +120,8 @@ namespace Team_Victoria_Controller
             int Ly = MartyDef.DistanceFromEve - y;
 
             double ang1 = (Geometry.XYtoTheta(Lx, Ly) * 180.0) / Math.PI;
-            ang1 += 90;
-            ang1 = (180 - (ang1));
+            //ang1 += 90;
+            //ang1 = (180 - (ang1));
             Marty.C = ang1;
 
             double linka = MartyDef.RootToElbow_L;
@@ -136,7 +136,7 @@ namespace Team_Victoria_Controller
             double theta1 = theta1c + thetac - 90;
 
             Marty.B = theta2;
-            Marty.A = theta1;
+            Marty.A = theta1 - 15;
 
         }
 
