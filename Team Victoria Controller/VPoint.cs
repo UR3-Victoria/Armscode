@@ -48,13 +48,20 @@ namespace Team_Victoria_Controller
 
             //these are the distance from the center of camera to the object in correctly oriented mm
             int dX = (int)Math.Round(Geometry.PolarToX(thetaToCam + camera.Eve.A, rToCam));
-            int dY = (int)Math.Round(Geometry.PolarToY(thetaToCam + camera.Eve.A, rToCam));
+            int dY = -(int)Math.Round(Geometry.PolarToY(thetaToCam + camera.Eve.A, rToCam));
 
             //the real camera position x and y, plus the dX and dY to the object, minus the extra x and y to get to the end-effector from the camera
-            x = camera.x + dX - (int)Math.Round(Geometry.PolarToX(camera.Eve.A + Math.PI / 2, EveDef.WristToEnd_L));
-            y = camera.y + dY - (int)Math.Round(Geometry.PolarToY(camera.Eve.A + Math.PI / 2, EveDef.WristToEnd_L));
+            x = camera.x + dX - (int)Math.Round(Geometry.PolarToX(camera.Eve.A + Math.PI / 2, EveDef.WristToCam_L));
+            y = camera.y + dY - (int)Math.Round(Geometry.PolarToY(camera.Eve.A + Math.PI / 2, EveDef.WristToCam_L));
+
+            y = (int)(1.11*y - 30);
   
-            z = 0;
+            if(y > 250 && y < 500)
+            {
+                z = (int)-((y - 250) / 30);
+            }
+            else
+                z = 0;
 
             TransformXYZtoEVE();
             TransformXYZtoMARTY();
@@ -99,7 +106,9 @@ namespace Team_Victoria_Controller
         private void TransformXYZtoEVE()
         {
 
-            Eve.A = Geometry.XYtoTheta(x, y) - (Math.PI / 2);
+            Eve.A = -(Geometry.XYtoTheta(x, y) - (Math.PI / 2));
+
+
             double r = Geometry.XYtoR(x, y);
 
             double d = Geometry.Pyth(z + EveDef.WristToEnd_Z - EveDef.FloorToRoot_Z, r - EveDef.WristToEnd_L);        
@@ -112,6 +121,13 @@ namespace Team_Victoria_Controller
             Eve.B = Geometry.LawOfCosines(EveDef.ElbowToWrist_L, EveDef.RootToElbow_L, d) + dTheta;
 
             Eve.C = Geometry.LawOfCosines(d, EveDef.ElbowToWrist_L, EveDef.RootToElbow_L) + Eve.B;
+
+
+            if (Eve.A > 0)
+            {
+                Eve.A = Eve.A + Geometry.DtoR(1);
+                Eve.A = Eve.A * 1.1;
+            }
         }
         private void TransformXYZtoMARTY()
         {

@@ -17,7 +17,8 @@ namespace Team_Victoria_Controller
         public const int WristToEnd_Z = 75;
         public const int WristToEnd_L = 50;
 
-        public const int WristToCam_Z = 20;
+        public const int WristToCam_Z = 25;
+        public const int WristToCam_L = 75;
         public const double CameraWidthOverZ = 0.578; 
     }
 
