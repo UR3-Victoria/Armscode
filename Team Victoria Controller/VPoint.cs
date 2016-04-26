@@ -133,7 +133,9 @@ namespace Team_Victoria_Controller
         {
 
             int Lx = -x;
-            int Ly = MartyDef.DistanceFromEve - y;
+            double Ly = MartyDef.DistanceFromEve - y;
+
+            Ly = ((Ly - 300.00) * 1.1) + 300.00;
 
             double ang1 = (Geometry.XYtoTheta(Lx, Ly) * 180.0) / Math.PI;
             //ang1 += 90;
