@@ -463,7 +463,7 @@ namespace Team_Victoria_Controller
 
 
 
-            if (shape.tag == "Triangle" || shape.tag == "Square")
+            if (shape.tag == "Square")
             {
                 VPoint on_shape = new VPoint(shape.x, shape.y, shape.z);
                 on_shape.tag = shape.tag;
@@ -518,7 +518,7 @@ namespace Team_Victoria_Controller
 
             }
 
-            if (shape.tag == "Square" && false)
+            if (shape.tag == "Triangle")
             {
                 //These four lines create a shape to process.
                 //If you need to shift the position (xy) of the percieved shape, do it here

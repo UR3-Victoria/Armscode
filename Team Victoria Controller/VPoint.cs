@@ -146,13 +146,17 @@ namespace Team_Victoria_Controller
             double r = (Math.Sqrt(Math.Pow(Lx, 2) + Math.Pow(Ly, 2)) - MartyDef.WristToEnd_L);
             double dh = MartyDef.FloorToRoot_Z - MartyDef.WristToEnd_Z;
             double d = Math.Sqrt((r * r) + (dh * dh));
-            double theta2 = Math.Acos((linka * linka + linkb * linkb - d * d) / (2 * linka * linkb)) * (180 / Math.PI);
-            double theta1c = Math.Acos((d * d + linka * linka - linkb * linkb) / (2 * d * linka)) * (180 / Math.PI);
+            double theta2 = Math.Acos((linka * linka + linkb * linkb - d * d) / (2 * linka * linkb)) * (180.00 / Math.PI);
+            double theta1c = Math.Acos((d * d + linka * linka - linkb * linkb) / (2 * d * linka)) * (180.00 / Math.PI);
             double thetac = Math.Atan(r / dh) * (180 / Math.PI);
             double theta1 = theta1c + thetac - 90;
 
             Marty.B = theta2;
-            Marty.A = theta1 - 15;
+
+            if (theta1 - 15 < 0)
+                Marty.A = 0;
+            else
+                Marty.A = theta1 - 15;
 
         }
 
