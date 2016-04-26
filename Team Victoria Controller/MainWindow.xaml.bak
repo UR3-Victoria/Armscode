@@ -39,6 +39,7 @@
                 <MenuItem Header="Pump     OFF" Click="MenuPumpOff"/>
                 <Separator/>
                 <MenuItem Header="Go to Home" Click="GoToHome"/>
+                <MenuItem Header="Go to  . . ." Click="GoToInput"/>
             </MenuItem>
         </Menu>
 
