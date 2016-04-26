@@ -156,7 +156,7 @@ namespace Team_Victoria_Controller
             {
                 try
                 {
-                    _cap = new Capture(1);
+                    _cap = new Capture(0);
                     statusCam = Connection.Connected;
                 }
                 catch
@@ -190,7 +190,7 @@ namespace Team_Victoria_Controller
             squarePoint.tag = "Destination for sorted squares";
 
             //trianglePoint = new VPoint((int)Geometry.PolarToX(Geometry.DtoR(30), 350), (int)Geometry.PolarToY(Geometry.DtoR(30), 350), 30);
-            trianglePoint = new VPoint(-250, 250, 100);
+            trianglePoint = new VPoint(-250, 500, 100);
             trianglePoint.ID = new Bgr(64, 198, 64);
             trianglePoint.tag = "Destination for sorted triangles";
 
@@ -547,7 +547,7 @@ namespace Team_Victoria_Controller
                 commands2.Enqueue(VCommand.Wait);
                 commands2.Enqueue("2");
 
-                QueuePointMarty(squarePoint); //Go to square destination
+                QueuePointMarty(trianglePoint); //Go to square destination
 
                 commands2.Enqueue("M:0"); //Electromagnet off
 

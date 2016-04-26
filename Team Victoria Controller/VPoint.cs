@@ -148,7 +148,7 @@ namespace Team_Victoria_Controller
             double d = Math.Sqrt((r * r) + (dh * dh));
             double theta2 = Math.Acos((linka * linka + linkb * linkb - d * d) / (2 * linka * linkb)) * (180.00 / Math.PI);
             double theta1c = Math.Acos((d * d + linka * linka - linkb * linkb) / (2 * d * linka)) * (180.00 / Math.PI);
-            double thetac = Math.Atan(r / dh) * (180 / Math.PI);
+            double thetac = Math.Atan(r / dh) * (180.00 / Math.PI);
             double theta1 = theta1c + thetac - 90;
 
             Marty.B = theta2;
