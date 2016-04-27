@@ -194,20 +194,24 @@ namespace Team_Victoria_Controller
             eveCapturePoint = new VPoint(Geometry.DtoR(0), Geometry.DtoR(90), Geometry.DtoR(180), Geometry.DtoR(90));
             eveCapturePoint.ID = new Bgr(64, 64, 64);
             eveCapturePoint.tag = "Camera capture position";
+            eveCapturePoint.immune = true;
 
             eveHomePoint = new VPoint(Geometry.DtoR(0), Geometry.DtoR(90), Geometry.DtoR(150), Geometry.DtoR(90));
             eveHomePoint.ID = new Bgr(198, 64, 64);
             eveHomePoint.tag = "Home Position";
+            eveHomePoint.immune = true;
 
             //squarePoint = new VPoint((int)Geometry.PolarToX(Geometry.DtoR(150), 350), (int)Geometry.PolarToY(Geometry.DtoR(150), 350), 30);
-            squarePoint = new VPoint(-250, 350, 100);
+            squarePoint = new VPoint(-250, 350, 60);
             squarePoint.ID = new Bgr(64, 64, 198);
             squarePoint.tag = "Destination for sorted squares";
+            squarePoint.immune = true;
 
             //trianglePoint = new VPoint((int)Geometry.PolarToX(Geometry.DtoR(30), 350), (int)Geometry.PolarToY(Geometry.DtoR(30), 350), 30);
-            trianglePoint = new VPoint(-250, 500, 100);
+            trianglePoint = new VPoint(-250, 500, 60);
             trianglePoint.ID = new Bgr(64, 198, 64);
             trianglePoint.tag = "Destination for sorted triangles";
+            trianglePoint.immune = true;
 
             testPoint = new VPoint(0, 400, 0);
             testPoint.ID = new Bgr(200, 100, 200);
@@ -395,14 +399,14 @@ namespace Team_Victoria_Controller
                     case VCommand.WaitForStop:
 
                         commands1.Dequeue();
-                        _waiting = (1000 / progTimer.Interval.Milliseconds) * Int32.Parse(commands1.Dequeue());
+                        _waiting = (int)((1000 / progTimer.Interval.Milliseconds) * Single.Parse(commands1.Dequeue()));
                         _moving = true;
                         break;
 
                     case VCommand.Wait:
 
                         commands1.Dequeue();
-                        _waiting = (1000 / progTimer.Interval.Milliseconds) * Int32.Parse(commands1.Dequeue());
+                        _waiting = (int)((1000 / progTimer.Interval.Milliseconds) * Single.Parse(commands1.Dequeue()));
                         break;
 
                     case VCommand.DoAScan:
@@ -462,6 +466,8 @@ namespace Team_Victoria_Controller
         private void SortAShape()
         {
 
+            //FIX ME
+
             VPoint shape = points.Find(x => x.tag == "Square");
 
             if (shape == null)
@@ -485,18 +491,30 @@ namespace Team_Victoria_Controller
 
                 VPoint above_shape = new VPoint(shape.x, shape.y, 30);
 
-                VPoint above_shape2 = new VPoint(shape.x, shape.y, 15);
+                VPoint near_shape = new VPoint(shape.x, shape.y, 15);
+
+
+
+                VPoint far_above_shape = new VPoint(shape.x, shape.y, 200);
+
+                VPoint square_cap_a = new VPoint(squarePoint.Eve.A, far_above_shape.Eve.B, far_above_shape.Eve.C, far_above_shape.Eve.D);
+
+                
 
 
                 QueuePointEve(above_shape, false);
                 commands1.Enqueue(VCommand.WaitForStop);
                 commands1.Enqueue("2");
 
-                QueuePointEve(above_shape2, false);
+
+
+                QueuePointEve(near_shape, false);
                 commands1.Enqueue(VCommand.WaitForStop);
                 commands1.Enqueue("1");
 
                 commands1.Enqueue("P1");
+
+
 
 
                 QueuePointEve(on_shape, false);
@@ -504,12 +522,25 @@ namespace Team_Victoria_Controller
                 commands1.Enqueue("1");
 
                 commands1.Enqueue(VCommand.Wait);
-                commands1.Enqueue("1");
+                commands1.Enqueue("0.5");
 
 
-                QueuePointEve(eveHomePoint, false);
+
+
+                QueuePointEve(far_above_shape, false);
                 commands1.Enqueue(VCommand.WaitForStop);
-                commands1.Enqueue("3");
+                commands1.Enqueue("2");
+
+                commands1.Enqueue(VCommand.Wait);
+                commands1.Enqueue("0.5");
+
+
+
+                QueuePointEve(square_cap_a, false);
+                commands1.Enqueue(VCommand.WaitForStop);
+                commands1.Enqueue("2");
+
+
 
                 if (shape.tag == "Square")
                     QueuePointEve(squarePoint, true);
@@ -518,18 +549,32 @@ namespace Team_Victoria_Controller
                 commands1.Enqueue(VCommand.WaitForStop);
                 commands1.Enqueue("3");
 
+                commands1.Enqueue(VCommand.Wait);
+                commands1.Enqueue("0.5");
+
                 commands1.Enqueue("P0");
 
+
+
                 commands1.Enqueue(VCommand.Wait);
-                commands1.Enqueue("2");
+                commands1.Enqueue("1");
 
 
-                QueuePointEve(eveHomePoint, false);
+
+
+                QueuePointEve(eveCapturePoint, false);
+
                 commands1.Enqueue(VCommand.WaitForStop);
                 commands1.Enqueue("2");
 
-				commands1.Enqueue("S");
-                points.Remove(shape);
+                commands1.Enqueue(VCommand.Wait);
+                commands1.Enqueue("0.5");
+
+                commands1.Enqueue(VCommand.DoAScan);
+
+                commands1.Enqueue(VCommand.Wait);
+                commands1.Enqueue("0.5");
+
                 DisplayPoints();
 
             }
@@ -541,8 +586,6 @@ namespace Team_Victoria_Controller
                 VPoint on_shape = new VPoint(shape.x, shape.y); //ex. new VPoint(shape2.x - 30, shape2.y, 10)
                 on_shape.tag = shape.tag;
 
-                commands1.Enqueue("T");
-                points.Remove(shape); //remove the shape from the list & update display
                 DisplayPoints();
 
             
@@ -601,9 +644,60 @@ namespace Team_Victoria_Controller
             SetProgress(0);
             _scanning = false;
 
+            foreach(VPoint point in points)
+            {
+                if (point.immune == false)
+                    point.healthy = false;
+            }
+
             foreach (VShape shape in shapeDetector.shapes)
             {
-                points.Add(new VPoint(shape, eveCapturePoint));
+                int i = points.FindIndex(x => x.ID.ToString() == shape.ID.ToString());
+
+
+                if (i == -1)
+                {
+                    points.Add(new VPoint(shape, eveCapturePoint));
+                }
+                else
+                {
+                    points[i] = new VPoint(shape, eveCapturePoint);
+                }
+
+            }
+
+            List<VPoint> damnedPoints = new List<VPoint>();
+
+            foreach (VPoint point in points)
+            {
+                if (point.healthy == false)
+                {
+                    damnedPoints.Add(point);
+                    continue;
+                }
+            }
+
+            foreach (VPoint damnedPoint in damnedPoints)
+            {
+                try
+                {
+                    if (damnedPoint.tag == "Triangle")
+                        EvePort.WriteLine("T");
+                    else
+                    {
+                        EvePort.WriteLine("S");
+                    }
+                        
+                }
+                catch
+                {
+
+                }
+                finally
+                {
+                    points.Remove(damnedPoint);
+                }
+                
             }
 
             if(shapeDetector.shapes.Count == 0)
@@ -646,12 +740,9 @@ namespace Team_Victoria_Controller
             QueuePointEve(eveCapturePoint, false);
 
             commands1.Enqueue(VCommand.WaitForStop);
-            commands1.Enqueue("3");
+            commands1.Enqueue("2");
 
             commands1.Enqueue(VCommand.DoAScan);
-
-            commands1.Enqueue(VCommand.Wait);
-            commands1.Enqueue("1");
 
 
             try

@@ -25,9 +25,14 @@ namespace Team_Victoria_Controller
         public int y;
         public int z;
 
+        public bool healthy;
+        public bool immune = false;
+
+
         public VPoint(VShape shape, VPoint camera)
         {
             ID = shape.ID;
+            healthy = true;
 
             if (shape._isSquare)
                 tag = "Square";
@@ -75,6 +80,8 @@ namespace Team_Victoria_Controller
             y = _y;
             z = _z;
 
+            healthy = true;
+
             TransformXYZtoEVE();
             TransformXYZtoMARTY();
 
@@ -86,6 +93,8 @@ namespace Team_Victoria_Controller
             x = _x;
             y = _y;
             z = 0;
+
+            healthy = true;
 
             TransformXYZtoEVE();
             TransformXYZtoMARTY();
@@ -99,6 +108,8 @@ namespace Team_Victoria_Controller
             Eve.B = _shoulder;
             Eve.C = _elbow;
             Eve.D = _wrist;
+
+            healthy = true;
 
             TransformEVEtoXYZ();
         }
@@ -123,10 +134,10 @@ namespace Team_Victoria_Controller
             Eve.C = Geometry.LawOfCosines(d, EveDef.ElbowToWrist_L, EveDef.RootToElbow_L) + Eve.B;
 
 
-            if (Eve.A > 0)
+            if (Eve.A > -15)
             {
-                Eve.A = Eve.A + Geometry.DtoR(1);
-                Eve.A = Eve.A * 1.1;
+                Eve.A = Eve.A + Geometry.DtoR(2);
+                Eve.A = Eve.A * 1.15;
             }
         }
         private void TransformXYZtoMARTY()

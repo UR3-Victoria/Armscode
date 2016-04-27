@@ -72,7 +72,7 @@ namespace Team_Victoria_Controller
 
         public bool IsAnalogous(VShape other)
         {
-            return (Distance(FindCenter(), other.FindCenter()) < 64 && _shape.Length == other._shape.Length);
+            return (Distance(FindCenter(), other.FindCenter()) < 32 && _shape.Length == other._shape.Length);
         }
 
         //========================================================================================
