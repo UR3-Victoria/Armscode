@@ -39,6 +39,8 @@ namespace Team_Victoria_Controller
         public int _waiting;
         public Boolean _moving; //not really true, only TRUE for waiting for move
 
+        public Boolean _eveNext;
+
         public Boolean _autoCommand;
         public Boolean _doCommand;
 
@@ -167,6 +169,13 @@ namespace Team_Victoria_Controller
             lblStatus1.Content = statusEve.ToString();
             lblStatus2.Content = statusMarty.ToString();
 
+
+            if (statusEve == Connection.Connected)
+                _eveNext = true;
+            else
+                _eveNext = false;
+
+
             while(statusCam == Connection.Unknown)
             {
                 try
@@ -202,7 +211,7 @@ namespace Team_Victoria_Controller
             eveHomePoint.immune = true;
 
             //squarePoint = new VPoint((int)Geometry.PolarToX(Geometry.DtoR(150), 350), (int)Geometry.PolarToY(Geometry.DtoR(150), 350), 30);
-            squarePoint = new VPoint(-250, 350, 60);
+            squarePoint = new VPoint(-260, 475, 50);
             squarePoint.ID = new Bgr(64, 64, 198);
             squarePoint.tag = "Destination for sorted squares";
             squarePoint.immune = true;
@@ -451,6 +460,12 @@ namespace Team_Victoria_Controller
                         _waiting = (1000 / progTimer.Interval.Milliseconds) * Int32.Parse(commands2.Dequeue());
                         break;
 
+                    case VCommand.DoAScan:
+                        commands2.Dequeue();
+                        capTimer.Start();
+                        ScanStart();
+                        break;
+
                     default:
                         String command = commands2.Dequeue();
                         MartyPort.Write(command);
@@ -468,23 +483,56 @@ namespace Team_Victoria_Controller
 
             //FIX ME
 
-            VPoint shape = points.Find(x => x.tag == "Square");
+            VPoint shape;
 
-            if (shape == null)
+            if (_eveNext)
+            {
+                shape = points.Find(x => x.tag == "Square");
+
+                if (shape == null)
+                {
+                    shape = points.Find(x => x.tag == "Triangle");
+
+                    if (shape == null)
+                    {
+                        ProgramStart();
+                        DisplayCommands();
+                        return;
+                    }
+                }
+
+            }
+            else
             {
                 shape = points.Find(x => x.tag == "Triangle");
 
                 if (shape == null)
                 {
-                    ProgramStart();
-                    DisplayCommands();
-                    return;
+                   shape = points.Find(x => x.tag == "Square");
+
+                   if (shape == null)
+                   {
+                       ProgramStart();
+                       DisplayCommands();
+                       return;
+                   }
+                   else
+                   {
+                       _eveNext = true;
+                   }
+                }
+                else
+                {
+                    if (shape.invalid)
+                        _eveNext = true;
                 }
             }
 
 
 
-            if (shape.tag == "Square")
+
+
+            if (_eveNext)
             {
                 VPoint on_shape = new VPoint(shape.x, shape.y, shape.z);
                 on_shape.tag = shape.tag;
@@ -547,7 +595,7 @@ namespace Team_Victoria_Controller
                 if (shape.tag == "Triangle")
                     QueuePointEve(trianglePoint, true);
                 commands1.Enqueue(VCommand.WaitForStop);
-                commands1.Enqueue("3");
+                commands1.Enqueue("2");
 
                 commands1.Enqueue(VCommand.Wait);
                 commands1.Enqueue("0.5");
@@ -579,14 +627,14 @@ namespace Team_Victoria_Controller
 
             }
 
-            if (shape.tag == "Triangle")
+            else
             {
                 //These four lines create a shape to process.
                 //If you need to shift the position (xy) of the percieved shape, do it here
                 VPoint on_shape = new VPoint(shape.x, shape.y); //ex. new VPoint(shape2.x - 30, shape2.y, 10)
                 on_shape.tag = shape.tag;
 
-                DisplayPoints();
+                
 
             
 
@@ -602,24 +650,33 @@ namespace Team_Victoria_Controller
                 commands2.Enqueue(VCommand.Wait);
                 commands2.Enqueue("2");
 
-                commands2.Enqueue("B:60");
+                commands2.Enqueue("C:0");
 
                 commands2.Enqueue(VCommand.Wait);
                 commands2.Enqueue("2");
 
-                QueuePointMarty(trianglePoint); //Go to square destination
+                commands2.Enqueue("A:50");
+
+                commands2.Enqueue(VCommand.Wait);
+                commands2.Enqueue("2");
+
+                commands2.Enqueue("B:120");
+
+                commands2.Enqueue(VCommand.Wait);
+                commands2.Enqueue("2");
 
                 commands2.Enqueue("M:0"); //Electromagnet off
 
                 commands2.Enqueue(VCommand.Wait);
                 commands2.Enqueue("2");
 
+
                 commands2.Enqueue("A:142"); //Pounce position
 
                 commands2.Enqueue(VCommand.Wait);
                 commands2.Enqueue("2");
 
-                commands2.Enqueue("B:4");
+                commands2.Enqueue("B:20");
 
                 commands2.Enqueue(VCommand.Wait);
                 commands2.Enqueue("2");
@@ -629,7 +686,22 @@ namespace Team_Victoria_Controller
 
                 commands2.Enqueue(VCommand.Wait);
                 commands2.Enqueue("2");
+
+                commands2.Enqueue(VCommand.DoAScan);
+
+
+                DisplayCommands();
+
+                DisplayPoints();
             }
+
+            if (statusEve == Connection.Connected && statusMarty == Connection.Disconnected)
+                _eveNext = true;
+            else if (statusEve == Connection.Disconnected && statusMarty == Connection.Connected)
+                _eveNext = false;
+            else
+                _eveNext = !_eveNext;
+
         }
 
         private void ScanStart()
@@ -817,7 +889,6 @@ namespace Team_Victoria_Controller
             commands2.Enqueue("A:" + Math.Round(point.Marty.A, 0).ToString());
             commands2.Enqueue(VCommand.Wait);
             commands2.Enqueue("2");
-            
         }
 
 

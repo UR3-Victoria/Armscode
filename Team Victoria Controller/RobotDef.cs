@@ -14,7 +14,7 @@ namespace Team_Victoria_Controller
         public const int FloorToRoot_Z = 190;
         public const int RootToElbow_L = 300;
         public const int ElbowToWrist_L = 300;
-        public const int WristToEnd_Z = 72;
+        public const int WristToEnd_Z = 70;
         public const int WristToEnd_L = 50;
 
         public const int WristToCam_Z = 25;

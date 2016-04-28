@@ -28,6 +28,8 @@ namespace Team_Victoria_Controller
         public bool healthy;
         public bool immune = false;
 
+        public bool invalid;
+
 
         public VPoint(VShape shape, VPoint camera)
         {
@@ -146,11 +148,19 @@ namespace Team_Victoria_Controller
             int Lx = -x;
             double Ly = MartyDef.DistanceFromEve - y;
 
-            Ly = ((Ly - 300.00) * 1.1) + 300.00;
+            //Ly = ((Ly - 300.00) * 1.1) + 300.00;
 
             double ang1 = (Geometry.XYtoTheta(Lx, Ly) * 180.0) / Math.PI;
             //ang1 += 90;
             //ang1 = (180 - (ang1));
+            if (ang1 > 90)
+            {
+                ang1 += (ang1 - 90) * (30.00 / 90.00);
+            }
+            else
+            {
+                ang1 -= (ang1) * (5.00 / 90.00);
+            }
             Marty.C = ang1;
 
             double linka = MartyDef.RootToElbow_L;
@@ -166,10 +176,18 @@ namespace Team_Victoria_Controller
 
             Marty.B = theta2;
 
-            if (theta1 - 15 < 0)
+            if (theta1 - 4 < 0)
                 Marty.A = 0;
             else
-                Marty.A = theta1 - 15;
+                Marty.A = theta1 - 4;
+
+
+
+
+            if(double.IsNaN(Marty.B))
+            {
+                invalid = true;
+            }
 
         }
 
